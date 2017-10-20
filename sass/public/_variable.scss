@@ -1,0 +1,236 @@
+$publicFont:Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+$themeColor:#a50000;
+$subtitleColor:#a50000;
+$white:#fff;
+$black:#000;
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+    transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    -moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+//transition all
+@mixin transition($transition){
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  -ms-transition:$transition;
+  -webkit-transition:$transition;
+  transition:$transition;
+}
+@mixin transition-property($property){
+  -moz-transition-property:$property;
+  -o-transition-property:$property;
+  -ms-transition-property:$property;
+  -webkit-transition-property:$property;
+  transition-property:$property;
+}
+@mixin transition-duration($duration){
+  -moz-transition-duration:$duration;
+  -o-transition-duration:$duration;
+  -ms-transition-duration:$duration;
+  -webkit-transition-duration:$duration;
+  transition-duration:$duration;
+}
+@mixin transition-timing-function($timing){
+  -moz-transition-timing-function:$timing;
+  -o-transition-timing-function:$timing;
+  -ms-transition-timing-function:$timing;
+  -webkit-transition-timing-function:$timing;
+  transition-timing-function:$timing;
+}
+@mixin transition-delay($delay){
+  -moz-transition-delay:$delay;
+  -o-transition-delay:$delay;
+  -ms-transition-delay:$delay;
+  -webkit-transition-delay:$delay;
+  transition-delay:$delay;
+}
+//animation all
+@mixin keyframes($animationName) { 
+  @-webkit-keyframes #{$animationName}
+  { 
+    @content; 
+  } 
+  @-moz-keyframes #{$animationName}
+  { 
+    @content; 
+  } 
+  @-o-keyframes #{$animationName}
+  {
+    @content; 
+  } 
+  @keyframes #{$animationName}
+  { 
+    @content; 
+  }
+}
+@mixin animation($animation){
+  -moz-animation:$animation;
+  -webkit-animation:$animation;
+  -o-animation:$animation;
+  animation:$animation;
+}
+//规定 @keyframes 动画的名称。
+@mixin animation-name($name){
+  -moz-animation-name:$name;
+  -webkit-animation-name:$name;
+  -o-animation-name:$name;
+  animation-name:$name;
+}
+//规定动画完成一个周期所花费的秒或毫秒。默认是 0。
+@mixin animation-duration($duration){
+  -moz-animation-duration:$duration;
+  -webkit-animation-duration:$duration;
+  -o-animation-duration:$duration;
+  animation-duration:$duration;
+}
+//规定动画的速度曲线。默认是 "ease"
+@mixin animation-timing-function($timing-function){
+  -moz-animation-timing-function:$timing-function;
+  -webkit-animation-timing-function:$timing-function;
+  -o-animation-timing-function:$timing-function;
+  animation-timing-function:$timing-function;
+}
+//规定动画何时开始。默认是 0
+@mixin animation-delay($delay){
+  -moz-animation-delay:$delay;
+  -webkit-animation-delay:$delay;
+  -o-animation-delay:$delay;
+  animation-delay:$delay;
+}
+//规定动画被播放的次数。默认是 1
+@mixin animation-iteration-count($iteration-count){
+  -moz-animation-iteration-count:$iteration-count;
+  -webkit-animation-iteration-count:$iteration-count;
+  -o-animation-iteration-count:$iteration-count;
+  animation-iteration-count:$iteration-count;
+}
+// 规定动画是否在下一周期逆向地播放。默认是 "normal"
+@mixin animation-direction($direction){
+  -moz-animation-direction:$direction;
+  -webkit-animation-direction:$direction;
+  -o-animation-direction:$direction;
+  animation-direction:$direction;
+}
+//规定动画是否正在运行或暂停。默认是 "running"
+@mixin animation-play-state($play-state){
+  -moz-animation-play-state:$play-state;
+  -webkit-animation-play-state:$play-state;
+  -o-animation-play-state:$play-state;
+  animation-play-state:$play-state;
+}
+//  规定对象动画时间之外的状态
+@mixin animation-fill-mode($fill-mode){
+     -moz-animation-fill-mode:$fill-mode;
+     -webkit-animation-fill-mode:$fill-mode;
+       -o-animation-fill-mode:$fill-mode;
+          animation-fill-mode:$fill-mode;
+}
+//column-count 属性规定元素应该被分隔的列数
+@mixin column-count($count){
+  -moz-column-count:$count;  
+  -webkit-column-count:$count; 
+  column-count:$count;
+}
+//column-gap 属性规定列之间的间隔
+@mixin column-gap($gap){
+  -moz-column-gap:$gap;  
+  -webkit-column-gap:$gap; 
+  column-gap:$gap;
+}
+//column-rule 属性设置列之间的宽度、样式和颜色规则
+@mixin column-rule($rule){
+  -moz-column-rule:$rule;  
+  -webkit-column-rule:$rule; 
+  column-rule:$rule;
+}
+
+//*******************************************//flex 布局处理begin
+@mixin display($flex){  
+    display: -moz-#{$flex}; 
+    display: -webkit-#{$flex}; 
+    display: #{$flex};
+}
+// box-flex
+@mixin box-flex($num){
+    -moz-box-flex: $num; 
+    -webkit-box-flex: $num; 
+    box-flex: $num;
+    -webkit-flex:$num;
+    flex:$num;
+}
+@mixin align-content($content){
+  -webkit-align-content: $content;
+  align-content: $content;
+}
+@mixin align-items($items){
+  -webkit-align-items: $items;
+  align-items: $items;
+}
+@mixin align-self($self){
+  -webkit-align-self: $self;
+  align-self: $self;
+}
+@mixin order($order){
+  -webkit-order: $order;
+  order: $order;
+}
+@mixin justify-content($space){
+  -webkit-justify-content: $space;
+  -moz-justify-content: $space;
+  justify-content: $space;
+}
+@mixin flex-grow($grow){
+  -webkit-flex-grow:$grow;
+  flex-grow:$grow;
+}
+@mixin flex-shrink($shrink){
+  -webkit-flex-shrink:$shrink;
+  flex-shrink:$shrink;
+}
+@mixin flex-basis($basis){
+  -webkit-flex-basis:$basis;
+  flex-basis:$basis;
+}
+@mixin flex-flow($flow){
+  -webkit-flex-flow:$flow;
+  flex-flow:$flow;
+}
+@mixin flex-direction($direction){
+  -webkit-flex-direction:$direction;
+  flex-direction:$direction;
+}
+@mixin flex-wrap($wrap){
+  -webkit-flex-wrap:$wrap;
+  flex-wrap:$wrap;
+}
+//*******************************************//flex 布局处理end
+
+
+
