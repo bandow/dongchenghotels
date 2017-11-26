@@ -8,6 +8,7 @@
 @import 'variable';
 html{
 	font-family:$publicFont;
+  font-size:12px;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -42,11 +43,16 @@ table {
   border-collapse: collapse;      
   border-spacing: 0;
 }
-/*取消a标签在移动端点击时的背景颜色*/
-a,a:hover,a:active,a:visited,a:link,a:focus{
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-    outline:none;
-    background: none;
-    text-decoration: none;
+a{
+  text-decoration:none;
+  @include transition(all .5s);
+}
+/*去掉chrome表单自动填充去掉input黄色背景*/
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill { 
+  -webkit-box-shadow: 0 0 0 1000px white inset; 
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset; 
 }

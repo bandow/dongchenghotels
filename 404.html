@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+ 	<meta name="description" content="不超过150个字符"/>
+ 	<meta name="keywords" content=""/>
+ 	<meta name="author" content="name, sycbbb@sina.com"/>
+ 	<meta name="robots" content="index,follow"/>
+	<title></title>
+	<link rel="stylesheet" href="styles/login-register.css">
+	<link rel="stylesheet" href="styles/404.css">
+	<style>
+		.header-nav-content .login-icon i.help .help-menu dl dd i{background-image:url(images/hotel_icon.png);}
+		.header-nav-content .logo i{background:url(images/hotel_icon.png) 0 -53px no-repeat;}
+		.header .header-nav-content .login-icon i.phone,
+		.header .header-nav-content .login-icon i.help,
+		.header .header-nav-content .login-icon .en{background-image:url(images/hotel_icon.png);}
+		.order-footer p.text a i{background-image:url(images/hotel_icon.png)}
+		/*登录注册样式 begin*/
+		.login-register-content .login-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content .other-align a{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content label p i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label p i{background-image:url(images/hotel_icon.png);}
+		.retrieve-password .retrieve-password-go-back a{background-image:url(images/hotel_icon.png);}
+		.retrieve-password label.code > i{background-image:url(images/hotel_icon.png);}
+		.register-success .title i{background-image:url(images/hotel_icon.png);}
+		.register-success .register-success-content .gift{background-image:url(images/hotel_icon.png);}
+		.other-login .other-login-content label.code > i{background-image:url(images/hotel_icon.png);}
+		.binding .binding-content h2 i{background-image:url(images/hotel_icon.png);}
+		/*登录注册样式 end*/
+	</style>
+</head>
+<body>
+	<div class="warapper" id="warapper">
+		<div class="header">
+			<div class="w1200 header-nav-content">
+				<a class="logo" href="index.html"><i></i></a>
+				<a class="active" href="">首页</a>
+				<a href="">酒店预订</a> 
+				<a href="">企业差旅</a>
+				<a href="">权益中心</a>
+
+				<div class="login-icon">
+					<i class="phone">
+						<div class="download-app">
+							<img src="images/code.jpg" alt="">
+							<h3>下载东呈会APP</h3>
+							<p>新用户领<span>200元优惠券</span></p>
+						</div>
+					</i>
+					<i class="help">
+						<div class="help-menu">
+							<dl>
+								<dd style="margin-bottom:10px"><a href=""><i class="i1"></i><span>智能客服-呈呈</span></a></dd>
+								<dd><a href=""><i class="i2"></i><span>QQ在线客服</span></a></dd>
+							</dl>
+						</div>
+					</i>
+					<a class="en" target="_blank" href="http://en.dossen.com"></a>
+					<!-- 登录前 -->
+					<div class="login-before" style="display:none;">
+						<a class="login" href="javascript:;">登录</a>
+						<a class="register" href="javascript:;">注册</a>
+					</div>
+					<!-- 登录后 -->
+					<div class="login-after">
+						<div class="uset-name-content">
+							<a class="user-name" href="">User 上午好！</a>
+							<div class="user-name-menu">
+								<dl>
+									<dd><a href="#"><span>我的订单</span></a></dd>
+									<!-- <dd><a href="#"><span>我的钱包</span></a></dd>
+									<dd><a href="#"><span>我的劵包</span></a></dd> -->
+									<dd><a href="#"><span>个人中心</span></a></dd>
+									<dd><a href="#"><span>退出</span></a></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="error404">
+			<div class="text">
+				<div class="img"><img src="images/mascot.png" alt=""></div>
+				<div class="text-info">
+					<h3>很抱歉，您所访问的内容已被删除或不存在...</h3>
+					<p>您可以尝试<a href="#">刷新</a>或返回<a href="index.html">东呈首页</a>重新搜索预订酒店，如有疑问 </p>
+					<p>可拨打客服电话：400-700-7899或在线QQ4007007899.</p>
+				</div>
+			</div>
+		</div>
+		<div class="order-footer">
+			<p class="title">
+				<a href="#">东呈快讯</a>
+				<a href="#">酒店加盟</a>
+				<a href="#">职位招聘</a>
+				<a href="#">联系我们</a>
+			</p>
+			<p class="text"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45010302000124"><i></i><span>桂公网安备 45010302000124号</span></a><em>|</em>桂ICP备07500682号<em>|</em>东呈酒店集团版权所有 广州东呈酒店投资管理集团有限公司</p>
+		</div>
+	</div>
+	<!-- iframe 内容 begin -->
+	<iframe class="J_iframe" id="iframe" name="iframe" width="100%" height="100%" src="login.html" frameborder="0"></iframe>
+	<!-- iframe 内容 end -->
+	<!-- script begin -->
+	<script src="plugins/jquery/jquery-1.10.1.min.js"></script>
+	<script src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="scripts/loginRegister.js"></script>
+	<script>
+		$(document).ready(function(){
+			var headerHeight=$(".header").outerHeight();
+			var footerHeight=$(".order-footer").outerHeight();
+			var cHeight=$(window).height()-headerHeight-footerHeight-80;
+			$(".error404").height(cHeight);
+
+			//用户名滑过
+			$(".uset-name-content").on("mouseover",function(){
+				$(this).find(".user-name").addClass("on");
+				$(this).find(".user-name-menu").show();
+			});
+			$(".uset-name-content").on("mouseout",function(){
+				$(this).find(".user-name").removeClass("on");
+				$(this).find(".user-name-menu").hide();
+			});
+
+			$(".header .header-nav-content .login-icon i.phone").on("mouseover",function(){
+				$(this).find(".download-app").show();
+			});
+			$(".header .header-nav-content .login-icon i.phone").on("mouseout",function(){
+				$(this).find(".download-app").hide();
+			});
+			$(".header .header-nav-content .login-icon i.help").on("mouseover",function(){
+				$(this).find(".help-menu").show();
+			});
+			$(".header .header-nav-content .login-icon i.help").on("mouseout",function(){
+				$(this).find(".help-menu").hide();
+			});
+		});
+	</script>
+	<!-- script end -->
+</body>
+</html>

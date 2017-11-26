@@ -1,0 +1,1308 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for PC
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2017-10-20
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  font-size: 12px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+}
+
+ol, ul {
+  /*去掉列表点*/
+  list-style: none;
+}
+
+table {
+  /*去掉表格的双行线*/
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*去掉chrome表单自动填充去掉input黄色背景*/
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.w1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.w1050 {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.arrow-bottom {
+  position: relative;
+}
+.arrow-bottom:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #d1d1d1;
+  -webkit-transform: rotateZ(-135deg);
+  transform: rotateZ(-135deg);
+}
+
+.arrow-left {
+  position: relative;
+}
+.arrow-left:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #333;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.arrow-right {
+  position: relative;
+}
+.arrow-right:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -3px;
+  color: #535353;
+  -webkit-transform: rotateZ(135deg);
+  transform: rotateZ(135deg);
+}
+
+.arrow-bottom {
+  position: relative;
+}
+.arrow-bottom:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #535353;
+  -webkit-transform: rotateZ(-135deg);
+  transform: rotateZ(-135deg);
+}
+
+.warapper {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 69px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.header .header-nav {
+  overflow: hidden;
+}
+.header .header-nav .logo {
+  float: left;
+  display: inline-block;
+  margin-right: 72px;
+  text-decoration: none;
+}
+.header .header-nav .logo i {
+  margin-top: 9px;
+  width: 76px;
+  height: 51px;
+  display: block;
+}
+.header .header-nav .login-before {
+  float: right;
+  margin-top: 20px;
+}
+.header .header-nav .login-before > i {
+  display: inline-block;
+  margin-left: 28px;
+  float: left;
+  cursor: pointer;
+}
+.header .header-nav .login-before .login {
+  float: left;
+  margin-left: 28px;
+  display: inline-block;
+  width: 72px;
+  height: 30px;
+  border: 1px solid;
+  color: #c62153;
+  border-radius: 3px;
+  text-align: center;
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.header .header-nav .login-before .login:hover {
+  background-color: #9e1a42;
+  border: 1px solid #9e1a42;
+  color: #fff;
+}
+.header .header-nav .login-before .register {
+  float: left;
+  margin-left: 8px;
+  display: inline-block;
+  width: 74px;
+  height: 30px;
+  background-color: #c62153;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.header .header-nav .login-before .register:hover {
+  background-color: #9e1a42;
+}
+.header .header-nav .login-after {
+  float: right;
+  margin-top: 20px;
+}
+.header .header-nav .login-after > a {
+  position: relative;
+  margin-left: 30px;
+  padding-right: 30px;
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #474747;
+}
+.header .header-nav .login-after > a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 4px solid;
+  margin-top: -2px;
+  border-color: #bfbfbf transparent transparent transparent;
+}
+.header .header-nav .login-after > a:hover {
+  color: #fff;
+}
+
+.confirm-order-content .nav {
+  padding: 20px 0;
+  overflow: hidden;
+}
+.confirm-order-content .nav i {
+  float: left;
+  margin-top: 6px;
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  margin-right: 10px;
+}
+.confirm-order-content .nav a {
+  float: left;
+  display: inline-block;
+  font: 12px/24px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #535353;
+  text-decoration: none;
+}
+.confirm-order-content .nav a:hover {
+  color: #c62153;
+}
+.confirm-order-content .nav em {
+  float: left;
+  display: inline-block;
+  height: 24px;
+  padding: 0 15px;
+}
+
+.confirm-order-content-info {
+  overflow: hidden;
+}
+.confirm-order-content-info .coci-left {
+  float: left;
+  padding: 30px 20px;
+  width: 688px;
+  border: 1px solid #e5e5e5;
+  border-right: 0;
+}
+.confirm-order-content-info .coci-left .book-info .title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.confirm-order-content-info .coci-left .book-info .title h2 {
+  display: inline-block;
+  width: 95px;
+  font: bold 16px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #3f3f3f;
+}
+.confirm-order-content-info .coci-left .book-info .title p {
+  display: inline-block;
+  font: 14px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #7a7a7a;
+}
+.confirm-order-content-info .coci-left .book-info .title p a {
+  color: #c62153;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.confirm-order-content-info .coci-left .book-info .items {
+  margin-top: 15px;
+  overflow: hidden;
+}
+.confirm-order-content-info .coci-left .book-info .items > em {
+  float: left;
+  display: inline-block;
+  width: 95px;
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #333;
+}
+.confirm-order-content-info .coci-left .book-info .items > span {
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #757575;
+}
+.confirm-order-content-info .coci-left .book-info .items > span > i {
+  display: inline-block;
+  padding: 0 5px;
+}
+.confirm-order-content-info .coci-left .book-info .items > a {
+  margin-left: 20px;
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #c62153;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num {
+  float: left;
+  display: inline-block;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+  border-bottom: 0;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i:first-child {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px 0 0 5px;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i:first-child:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+  width: 10px;
+  height: 2px;
+  background-color: #8c8c8c;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i:last-child {
+  border: 1px solid #e5e5e5;
+  border-radius: 0 5px 5px 0;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i:last-child:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+  width: 10px;
+  height: 2px;
+  background-color: #8c8c8c;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i:last-child:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -1px;
+  width: 2px;
+  height: 10px;
+  background-color: #8c8c8c;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i.on {
+  background-color: #c62153;
+  border: 1px solid #c62153;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i.on:first-child:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i.on:last-child:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num i.on:last-child:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -1px;
+  width: 2px;
+  height: 10px;
+  background-color: #fff;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num label {
+  float: left;
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0;
+}
+.confirm-order-content-info .coci-left .book-info .items .room-num label input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #333;
+  text-align: center;
+}
+.confirm-order-content-info .coci-left .book-info .items .select {
+  padding: 0 10px;
+  float: left;
+  display: inline-block;
+  width: 204px;
+  height: 36px;
+  border: 1px solid #e5e5e5;
+  font: 13px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #303030;
+  cursor: pointer;
+}
+.confirm-order-content-info .coci-left .book-info .items .date {
+  float: left;
+  display: none;
+}
+.confirm-order-content-info .coci-left .book-info .items .date > div {
+  float: left;
+}
+.confirm-order-content-info .coci-left .book-info .items .date > div h6 {
+  padding: 0 10px;
+  float: left;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  font: 13px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #303030;
+  cursor: pointer;
+}
+.confirm-order-content-info .coci-left .book-info .items .date > div span {
+  float: left;
+  padding: 0 8px;
+  display: inline-block;
+  font: 13px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #2e2e2e;
+}
+.confirm-order-content-info .coci-left .book-info .items .date a {
+  float: left;
+  display: inline-block;
+  width: 75px;
+  height: 30px;
+  font: 13px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #c62153;
+}
+.confirm-order-content-info .coci-left .live-info {
+  margin-top: 40px;
+}
+.confirm-order-content-info .coci-left .live-info .title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.confirm-order-content-info .coci-left .live-info .title h2 {
+  display: inline-block;
+  width: 95px;
+  font: bold 16px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #3f3f3f;
+}
+.confirm-order-content-info .coci-left .live-info .items {
+  margin-top: 15px;
+  overflow: hidden;
+}
+.confirm-order-content-info .coci-left .live-info .items em {
+  float: left;
+  display: inline-block;
+  width: 95px;
+  font: 14px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #333;
+}
+.confirm-order-content-info .coci-left .live-info .items em i {
+  color: #c62153;
+}
+.confirm-order-content-info .coci-left .live-info .items label {
+  float: left;
+  padding: 0 10px;
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  border: 1px solid #e5e5e5;
+  font-size: 0;
+}
+.confirm-order-content-info .coci-left .live-info .items label input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #333;
+}
+.confirm-order-content-info .coci-left .live-info .items label input::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+.confirm-order-content-info .coci-left .live-info .items span {
+  margin-left: 20px;
+  float: left;
+  font: 12px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #a3a3a3;
+}
+.confirm-order-content-info .coci-left .live-info .items .img {
+  margin-top: 1px;
+  margin-left: 20px;
+  float: left;
+  width: 93px;
+  height: 34px;
+}
+.confirm-order-content-info .coci-left .live-info .items .img img {
+  width: 100%;
+}
+.confirm-order-content-info .coci-left .live-info .items > i {
+  margin-top: 8px;
+  margin-left: 20px;
+  float: left;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.confirm-order-content-info .coci-left .live-info .items > a {
+  display: inline-block;
+  margin-left: 20px;
+  float: left;
+  width: 110px;
+  height: 36px;
+  border: 1px solid;
+  color: #c62153;
+  border-radius: 3px;
+  text-align: center;
+  font: 14px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.confirm-order-content-info .coci-left .order-price {
+  margin-top: 40px;
+}
+.confirm-order-content-info .coci-left .order-price .title {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.confirm-order-content-info .coci-left .order-price .title h2 {
+  display: inline-block;
+  width: 95px;
+  font: bold 16px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #3f3f3f;
+}
+.confirm-order-content-info .coci-left .order-price p {
+  font: 14px/36px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.confirm-order-content-info .coci-left .order-price p em {
+  display: inline-block;
+  width: 95px;
+  color: #333;
+}
+.confirm-order-content-info .coci-left .order-price p span {
+  color: #535353;
+}
+.confirm-order-content-info .coci-left .order-price p span.money {
+  color: #c62153;
+}
+.confirm-order-content-info .coci-left .order-price .btn {
+  float: right;
+}
+.confirm-order-content-info .coci-left .order-price .btn a {
+  display: block;
+  width: 182px;
+  height: 42px;
+  background-color: #c62153;
+  color: #fff;
+  text-align: center;
+  font: 16px/42px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.confirm-order-content-info .coci-right {
+  float: right;
+  padding: 30px 20px;
+  width: 362px;
+  background-color: #f7f7f7;
+}
+.confirm-order-content-info .coci-right h2 {
+  margin: 30px 0 5px;
+  font: bold 16px/24px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #3c3c3c;
+}
+.confirm-order-content-info .coci-right h2.name {
+  margin-top: 15px;
+}
+.confirm-order-content-info .coci-right p {
+  font: 12px/24px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #7d7d7d;
+}
+.confirm-order-content-info .coci-right p.policy {
+  font: 12px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  margin-bottom: 10px;
+}
+
+.hide-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff;
+  padding-top: 15px;
+  width: 100%;
+  height: 70px;
+  -moz-box-shadow: 0px -1px 5px #e3e3e4;
+  -o-box-shadow: 0px -1px 5px #e3e3e4;
+  -ms-box-shadow: 0px -1px 5px #e3e3e4;
+  -webkit-box-shadow: 0px -1px 5px #e3e3e4;
+  box-shadow: 0px -1px 5px #e3e3e4;
+}
+.hide-footer .left {
+  float: left;
+  padding: 0px 20px;
+  width: 688px;
+}
+.hide-footer .left .l {
+  float: left;
+}
+.hide-footer .left .l h3 {
+  font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #3b3b3b;
+}
+.hide-footer .left .l h3 span {
+  font-size: 20px;
+  color: #c62153;
+}
+.hide-footer .left .l p {
+  font: 12px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #6a6a6a;
+}
+.hide-footer .left a {
+  float: right;
+  display: block;
+  width: 182px;
+  height: 42px;
+  background-color: #c62153;
+  color: #fff;
+  text-align: center;
+  font: 16px/42px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.order-footer {
+  margin-top: 80px;
+  width: 100%;
+  height: 130px;
+  background-color: #f6f6f6;
+}
+.order-footer p.title {
+  padding: 30px 0 20px 0;
+  text-align: center;
+}
+.order-footer p.title a {
+  margin: 0 25px;
+  font: bold 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #1e1e1e;
+}
+.order-footer p.title a:hover {
+  color: #c62153;
+}
+.order-footer p.text {
+  text-align: center;
+  font: 12px/2 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #444;
+  width: 692px;
+  margin: 0 auto;
+}
+.order-footer p.text a {
+  color: #444;
+}
+.order-footer p.text a i {
+  float: left;
+  margin-right: 5px;
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  background-position: -144px -25px;
+}
+.order-footer p.text a span {
+  float: left;
+}
+.order-footer p.text em {
+  margin: 0 15px;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  display: none;
+  background-color: #000;
+  opacity: .5;
+}
+
+.choose-privilege {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  margin: -1000px 0 0 -360px;
+  width: 720px;
+  height: auto;
+  max-height: 505px;
+  border-radius: 3px;
+  background-color: #fff;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.choose-privilege .choose-privilege-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 36px;
+  height: 50px;
+  background-color: #eaeaea;
+  border-radius: 0 0 30px 30px;
+  cursor: pointer;
+}
+.choose-privilege .choose-privilege-close .cp-content {
+  padding: 3px 5px 0;
+  margin: 17px 3px 3px 3px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.choose-privilege .choose-privilege-close .cp-content a {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: middle;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.choose-privilege .choose-privilege-close .cp-content a:after {
+  content: '/';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.choose-privilege .choose-privilege-close .cp-content:hover a {
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.choose-privilege .title {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.choose-privilege .title h2 {
+  font: bold 18px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #696969;
+  text-align: center;
+}
+.choose-privilege .choose-privilege-list {
+  overflow: hidden;
+  padding: 35px 10px 0;
+}
+.choose-privilege .choose-privilege-list ul {
+  overflow: hidden;
+}
+.choose-privilege .choose-privilege-list ul li {
+  float: left;
+  margin: 0 20px 20px;
+  cursor: pointer;
+}
+.choose-privilege .choose-privilege-list ul li .choose-icon {
+  float: left;
+  margin-top: 29px;
+  width: 24px;
+  height: 25px;
+  background-position: -210px -65px;
+}
+.choose-privilege .choose-privilege-list ul li .r {
+  margin-left: 44px;
+  width: 265px;
+}
+.choose-privilege .choose-privilege-list ul li .r i {
+  float: left;
+  width: 57px;
+  height: 82px;
+  background-position: -191px -107px;
+}
+.choose-privilege .choose-privilege-list ul li .r .text {
+  height: 82px;
+  padding: 10px 0 0 10px;
+  margin-left: 57px;
+  border: 1px solid #e5e5e5;
+  background-color: #f9f9f9;
+}
+.choose-privilege .choose-privilege-list ul li .r .text h2 {
+  font: bold 16px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #c62153;
+}
+.choose-privilege .choose-privilege-list ul li .r .text h2 span {
+  font-weight: normal;
+  font-size: 12px;
+}
+.choose-privilege .choose-privilege-list ul li .r .text p {
+  font: 12px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #595959;
+}
+.choose-privilege .choose-privilege-list ul li.on .choose-icon {
+  background-position: -237px -65px;
+}
+.choose-privilege .btn {
+  margin: 20px auto 30px;
+  width: 240px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.choose-privilege .btn a {
+  display: block;
+  background-color: #c62153;
+  font: bold 16px/46px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.choose-privilege .btn a:hover {
+  background-color: #9e1a42;
+}
+
+.choose-privilege.on {
+  margin-top: -250px;
+}
+
+.choose-coupon {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  margin: -1000px 0 0 -360px;
+  width: 720px;
+  height: auto;
+  max-height: 568px;
+  border-radius: 3px;
+  background-color: #fff;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.choose-coupon .choose-coupon-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 36px;
+  height: 50px;
+  background-color: #eaeaea;
+  border-radius: 0 0 30px 30px;
+  cursor: pointer;
+}
+.choose-coupon .choose-coupon-close .cc-content {
+  padding: 3px 5px 0;
+  margin: 17px 3px 3px 3px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.choose-coupon .choose-coupon-close .cc-content a {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: middle;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.choose-coupon .choose-coupon-close .cc-content a:after {
+  content: '/';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.choose-coupon .choose-coupon-close .cc-content:hover a {
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.choose-coupon .title {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.choose-coupon .title h2 {
+  font: bold 18px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #696969;
+  text-align: center;
+}
+.choose-coupon .select-date {
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+.choose-coupon .select-date .date-list {
+  margin: 0 24px;
+  height: 56px;
+}
+.choose-coupon .select-date .prev {
+  position: absolute;
+  width: 24px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  top: 22px;
+  left: 0;
+}
+.choose-coupon .select-date .prev:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #fff;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+.choose-coupon .select-date .next {
+  position: absolute;
+  width: 24px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  top: 22px;
+  right: 0;
+}
+.choose-coupon .select-date .next:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: -5px;
+  color: #fff;
+  -webkit-transform: rotateZ(135deg);
+  transform: rotateZ(135deg);
+}
+.choose-coupon .select-date ul li {
+  padding: 5px 20px;
+  float: left;
+  cursor: pointer;
+}
+.choose-coupon .select-date ul li p {
+  text-align: center;
+}
+.choose-coupon .select-date ul li p.date {
+  font: bold 14px/2 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #6c6c6c;
+}
+.choose-coupon .select-date ul li p.untapped {
+  font: 12px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #a6a6a6;
+}
+.choose-coupon .select-date ul li.active p.untapped {
+  color: #c62153;
+}
+.choose-coupon .select-date ul li.active em {
+  position: absolute;
+  left: 35%;
+  bottom: -8px;
+  width: 30%;
+  height: 2px;
+  background-color: #c62153;
+}
+.choose-coupon .choose-coupon-list {
+  overflow: hidden;
+  padding: 20px 10px 0;
+}
+.choose-coupon .choose-coupon-list ul {
+  overflow: hidden;
+}
+.choose-coupon .choose-coupon-list ul li {
+  float: left;
+  margin: 0 20px 20px;
+  cursor: pointer;
+}
+.choose-coupon .choose-coupon-list ul li .choose-icon {
+  float: left;
+  margin-top: 29px;
+  width: 24px;
+  height: 25px;
+  background-position: -210px -65px;
+}
+.choose-coupon .choose-coupon-list ul li .r {
+  margin-left: 44px;
+  width: 265px;
+}
+.choose-coupon .choose-coupon-list ul li .r .r-left {
+  padding: 10px 10px 0 10px;
+  float: left;
+  width: 83px;
+  height: 82px;
+  background-position: -252px -107px;
+  display: table;
+}
+.choose-coupon .choose-coupon-list ul li .r .r-left > span {
+  font: 20px/1 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #fff;
+}
+.choose-coupon .choose-coupon-list ul li .r .r-left h2 {
+  font: bold 46px/46px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.choose-coupon .choose-coupon-list ul li .r .r-left h2.discount {
+  font: bold 46px/62px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.choose-coupon .choose-coupon-list ul li .r .r-left h2.discount > span {
+  padding-left: 3px;
+  font: bold 16px/1.2 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.choose-coupon .choose-coupon-list ul li .r .r-left em {
+  display: table-cell;
+  vertical-align: middle;
+}
+.choose-coupon .choose-coupon-list ul li .r .text {
+  height: 82px;
+  padding: 10px 0 0 10px;
+  margin-left: 83px;
+  border: 1px solid #e5e5e5;
+  background-color: #f9f9f9;
+}
+.choose-coupon .choose-coupon-list ul li .r .text h2 {
+  font: bold 16px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #c62153;
+}
+.choose-coupon .choose-coupon-list ul li .r .text h2 span {
+  font-weight: normal;
+  font-size: 12px;
+}
+.choose-coupon .choose-coupon-list ul li .r .text p {
+  font: 12px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #595959;
+}
+.choose-coupon .choose-coupon-list ul li.on .choose-icon {
+  background-position: -237px -65px;
+}
+.choose-coupon .choose-coupon-list ul li.disabled .r .r-left {
+  background-position: -336px -107px;
+}
+.choose-coupon .choose-coupon-list ul li.disabled .r .r-left h2 {
+  color: #ccc;
+}
+.choose-coupon .choose-coupon-list ul li.disabled .r .r-left span {
+  color: #ccc;
+}
+.choose-coupon .choose-coupon-list ul li.disabled .r .text h2 {
+  color: #ccc;
+}
+.choose-coupon .choose-coupon-list ul li.disabled .r .text p {
+  color: #ccc;
+}
+.choose-coupon > p {
+  padding: 0 0 0 30px;
+  margin-top: 20px;
+  width: 315px;
+  font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #525252;
+  cursor: pointer;
+}
+.choose-coupon .btn {
+  margin: 20px auto 30px;
+  width: 240px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.choose-coupon .btn a {
+  display: block;
+  background-color: #c62153;
+  font: bold 16px/46px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.choose-coupon .btn a:hover {
+  background-color: #9e1a42;
+}
+
+.choose-coupon.on {
+  margin-top: -284px;
+}
+
+.kindly-reminder {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  padding: 40px;
+  margin: -1000px 0 0 -220px;
+  width: 440px;
+  height: 510px;
+  border-radius: 3px;
+  background-color: #fff;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.kindly-reminder .user-serve-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 36px;
+  height: 50px;
+  background-color: #eaeaea;
+  border-radius: 0 0 30px 30px;
+  cursor: pointer;
+}
+.kindly-reminder .user-serve-close .us-content {
+  padding: 3px 5px 0;
+  margin: 17px 3px 3px 3px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.kindly-reminder .user-serve-close .us-content a {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: middle;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.kindly-reminder .user-serve-close .us-content a:after {
+  content: '/';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.kindly-reminder .user-serve-close .us-content:hover a {
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.kindly-reminder .title {
+  position: relative;
+  margin-bottom: 25px;
+}
+.kindly-reminder .title h3 {
+  font: bold 18px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #c62153;
+  text-align: center;
+}
+.kindly-reminder .title .line {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 120px;
+  height: 2px;
+  margin-left: -60px;
+  background-color: #c62153;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.kindly-reminder .user-serve-clause {
+  overflow: hidden;
+}
+.kindly-reminder .user-serve-clause h3 {
+  margin-top: 20px;
+  font: bold 14px/2 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #303030;
+}
+.kindly-reminder .user-serve-clause p {
+  font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #7a7a7a;
+}
+.kindly-reminder .btn-hide {
+  margin-top: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.kindly-reminder .btn-hide a {
+  display: block;
+  background-color: #c62153;
+  font: bold 18px/46px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.kindly-reminder .btn-hide a:hover {
+  background-color: #9e1a42;
+}
+
+.kindly-reminder.on {
+  margin: -255px 0 0 -220px;
+}
+
+/*# sourceMappingURL=confirm-order.css.map */

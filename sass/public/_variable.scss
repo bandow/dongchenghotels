@@ -1,8 +1,22 @@
-$publicFont:Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-$themeColor:#a50000;
-$subtitleColor:#a50000;
+$publicFont:"Microsoft YaHei",Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+$themeColor:#c62153;
+$TitleTextColor:#303030;
+$tagTextColor:#7a7a7a;
+$promptTextColor:#9a9a9a;
+$lineColor:#e5e5e5;
+$assistTagColor:#f3869d;
 $white:#fff;
 $black:#000;
+
+
+//box-shadow
+@mixin box-shadow($box-shadow) {
+  -moz-box-shadow: $box-shadow;
+  -o-box-shadow: $box-shadow;
+  -ms-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
 
 @mixin transform($transforms) {
 	-moz-transform: $transforms;

@@ -1,0 +1,245 @@
+/*Mcheckin_city*/
+.or_line .input_box .Mcheckin_city{
+    position: absolute;
+    left: 8px;
+    top: 42px;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 795px;
+    padding: 20px 25px;
+    border: 1px solid #e5e5e5;
+    box-shadow:0px 3px 5px #e5e5e5;
+    z-index: 2;
+}
+.Mcheckin_city .history .title::after,.Mcheckin_city .history .title::before{
+    content: "";
+    display: table;
+}
+.Mcheckin_city .history .title::after{
+    clear: both;
+}
+.Mcheckin_city .history .title .clear{
+    float: right;
+    color: #c62153;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Mcheckin_city .history .title span{
+    display: inline-block;
+    color: #848484;
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.Mcheckin_city .history .title .clear img{
+    margin-right: 9px;
+}
+.Mcheckin_city .history .title .clear span{
+    float: right;
+    color: #c62153;
+    font-weight: bold;
+}
+.Mcheckin_city .history ul::after,.Mcheckin_city .history ul:before{
+    content: "";
+    display: table;
+}
+.Mcheckin_city .history ul::after{
+    clear: both;
+}
+.Mcheckin_city .history_list li{
+    float: left;
+    margin-right: 45px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+.Mcheckin_city .history_list li a{
+    color: #848484;
+    display: inline-block;
+    font-size: 14px;
+}
+.Mcheckin_city .history_list li .active{
+    color: #c62153;
+}
+.Mcheckin_city .tabs {
+    position: relative;
+    overflow: hidden;
+}
+.Mcheckin_city .tabs .backbox {
+    height: 40px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    zoom: 1;
+}
+.Mcheckin_city .tabs .links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 795px;
+    height: 40px;
+}
+.Mcheckin_city .tabs .link {
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    padding-right: 35px;
+    line-height: 40px;
+    height: 40px;
+}
+.Mcheckin_city .tabs .link .ranks{
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    font-size: 14px;
+    color: #242424;
+    font-weight: bold;
+    width: 100%;
+    padding-right: 10px;
+}
+.Mcheckin_city .tabs .active {
+    border-bottom: 2px solid #c62153;
+}
+.Mcheckin_city .tabcontent {
+    padding-top: 5px;
+}
+.Mcheckin_city .group {
+    width:750px;
+}
+.Mcheckin_city .char {
+    color: #f3879e;
+    line-height: 24px;
+    font-size: 14px;
+}
+.Mcheckin_city .tips {
+    color: #b5b5b5;
+    padding-top: 5px;
+    font-size:12px;
+    margin-top: 20px;
+
+}
+.Mcheckin_city .citylist li {
+    float: left;
+    margin-right: 40px;
+    display: inline-block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.Mcheckin_city .citylist a {
+    color: #303030;
+    display: inline-block;
+    line-height: 20px;
+    font-weight: bold;
+    font: 400 14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+
+}
+.Mcheckin_city .citylist .active {
+    color: #c62153;
+}
+.Mcheckin_city .group ul::after,.Mcheckin_city .group ul::before{
+    content: "";
+    display: table;
+}
+.Mcheckin_city .group ul::after{
+    clear: both;
+}
+/*Mcheckin_check*/
+.or_line .input_box .Mcheckin_check{
+    position: absolute;
+    left: 8px;
+    top: 42px;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 795px;
+    padding: 10px 25px;
+    border: 1px solid #e5e5e5;
+    box-shadow:0px 3px 5px #e5e5e5;
+    z-index: 2;
+}
+
+.Mcheckin_check .city{
+    border-bottom: 1px solid #e5e5e5;
+}
+.Mcheckin_check .city::after,.Mcheckin_check .city::before{
+    content: "";
+    display: table;
+}
+.Mcheckin_check .city::after{
+    clear: both;
+}
+.Mcheckin_check .city span{
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    border-bottom: 2px solid #c62153;
+    color: #242424;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    top:5px;
+}
+.Mcheckin_check .group ul{
+    padding-top: 10px;
+}
+.Mcheckin_check .group ul li{
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    height: 25px;
+    line-height: 25px;
+    color: #242424;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.Mcheckin_check .group ul li a{
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    height: 25px;
+    line-height: 25px;
+    color: #242424;
+    cursor: pointer;
+}
+.Mcheckin_check .group .address{
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    height: 25px;
+    line-height: 25px;
+    color: #afafaf;
+    float: right;
+}
+.Mcheckin_check .group .more{
+    color: #c62153;
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    font-weight: bold;
+    border-bottom: none;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.Mcheckin_check .group ul::after,.Mcheckin_check .group ul::before{
+    content: "";
+    display: table;
+}
+.Mcheckin_check .group ul::after{
+    clear: both;
+}
+
+/*Mcheckin_none*/
+.or_line .input_box .Mcheckin_none{
+    position: absolute;
+    left: 8px;
+    top: 42px;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 266px;
+    padding: 15px 0 22px 18px;
+    border: 1px solid #e5e5e5;
+    box-shadow:0px 3px 5px #e5e5e5;
+    z-index: 2;
+}
+.Mcheckin_none div{
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    color: #878787;
+}
+.Mcheckin_none .results_message{
+    font: 400 14px/14px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    color: #c62153;
+    padding: 0 8px;
+}
+.Mcheckin_none .no_results{
+    margin-top: 15px;
+}
+.hide{display:none;}

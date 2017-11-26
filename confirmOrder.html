@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+ 	<meta name="description" content="东呈国际集团，一家卓越的连锁酒店集团，在全国有超过1200家连锁酒店，包括城市便捷酒店、宜尚酒店、怡程酒店、柏曼酒店、精途酒店，铂顿公寓等。东呈国际集团官网提供酒店预订，尊享会员服务，酒店地址、酒店电话等其他酒店信息查询服务。"/>
+ 	<meta name="keywords" content="东呈酒店预订，东呈酒店预定，东呈酒店电话，东呈官网"/>
+ 	<meta name="author" content="name, sycbbb@sina.com"/>
+ 	<meta name="robots" content="index,follow"/>
+	<title>填写订单-东呈国际集团官方预订平台</title>
+	<link rel="stylesheet" href="plugins/picker/daterangepicker.min.css">
+	<link rel="stylesheet" href="styles/login-register.css">
+	<link rel="stylesheet" href="plugins/swiper/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="styles/confirm-order.css">
+	<style>
+		.header-nav .logo i{background:url(images/hotel_icon.png) 0 -53px no-repeat;}
+		.confirm-order-content .nav i{background:url(images/hotel_icon.png) -480px -25px no-repeat;}
+		.confirm-order-content-info .coci-left .live-info .items > i{background:url(images/hotel_icon.png) -453px -0 no-repeat;}
+		.choose-privilege .choose-privilege-list ul li .choose-icon{background-image:url(images/hotel_icon.png)}
+		.choose-privilege .choose-privilege-list ul li .r i{background-image:url(images/hotel_icon.png)}
+		.choose-coupon .choose-coupon-list ul li .choose-icon{background-image:url(images/hotel_icon.png)}
+		.choose-coupon .choose-coupon-list ul li .r .r-left{background-image:url(images/hotel_icon.png)}
+		.order-footer p.text a i{background-image:url(images/hotel_icon.png)}
+		/*登录注册样式 begin*/
+		.login-register-content .login-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content .other-align a{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content label p i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label p i{background-image:url(images/hotel_icon.png);}
+		.retrieve-password .retrieve-password-go-back a{background-image:url(images/hotel_icon.png);}
+		.retrieve-password label.code > i{background-image:url(images/hotel_icon.png);}
+		.register-success .title i{background-image:url(images/hotel_icon.png);}
+		.register-success .register-success-content .gift{background-image:url(images/hotel_icon.png);}
+		.other-login .other-login-content label.code > i{background-image:url(images/hotel_icon.png);}
+		.binding .binding-content h2 i{background-image:url(images/hotel_icon.png);}
+		/*登录注册样式 end*/
+	</style>
+	<style>
+		.date-picker-wrapper{
+			padding:0;
+			background-color:
+			transparent;border:0;
+			-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,.2);
+			box-shadow:0px 3px 5px rgba(0,0,0,.2);
+			font-family:"Microsoft YaHei", Helvetica, Tahoma, Arial, STXihei, STHeiti, Heiti, SimSun, sans-serif;
+		}
+		.date-picker-wrapper.no-shortcuts{padding-bottom:0;padding-top:10px;}
+		.date-picker-wrapper .month-wrapper{border:0;padding:20px;}
+		.date-picker-wrapper .footer{border:0;}
+		.date-picker-wrapper .month-wrapper table{width:280px;}
+		.date-picker-wrapper .month-wrapper table.month2{width:280px;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.valid{color:#1e1e1e;font-weight:normal;border-radius:3px;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.valid.real-today{background:transparent;color:#c62153;}
+		.date-picker-wrapper .month-wrapper table .day{color:#c0c0c0;font-weight:normal;}
+		.date-picker-wrapper .first-date-selected{background-color:#c62153 !important;}
+		.date-picker-wrapper .last-date-selected{background-color:#c62153 !important;}
+		.date-picker-wrapper .month-wrapper table .day.checked{background-color:#e46188;color:#fff;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.valid.checked{color:#fff;}
+		.date-picker-wrapper .month-wrapper table td, .date-picker-wrapper .month-wrapper table th{font-weight:bold;color:#333;width:50px;padding:3px 2px;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.hovering{background-color:#e46188;color:#fff;}
+		.date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev{position:relative;}
+		.date-picker-wrapper table .caption .prev:after{
+		    content: '';
+		    position: absolute;
+		    top:50%;
+		    left:3px;
+		    width:10px;
+		    height:10px;
+		    border:1px solid;
+		    border-bottom: 0;
+		    border-right: 0;
+		    margin-top: -5px;
+		    color: #c62153;
+		    -webkit-transform: rotateZ(-45deg);
+		    transform: rotateZ(-45deg)
+		}
+		.date-picker-wrapper table .caption .next:after{
+		    content: '';
+		    position: absolute;
+		    top:50%;
+		    left:3px;
+		    width:10px;
+		    height:10px;
+		    border:1px solid;
+		    border-bottom: 0;
+		    border-right: 0;
+		    margin-top: -5px;
+		    color: #c62153;
+		    -webkit-transform: rotateZ(135deg);
+		    transform: rotateZ(135deg)
+		}
+		.date-picker-wrapper table .caption .next:hover,.date-picker-wrapper table .caption .prev:hover {
+		    background-color: #fff;
+		    color: #fff
+		}
+	</style>
+</head>
+<body>
+	<div class="warapper" id="warapper">
+		<div class="header">
+			<div class="header-nav w1050">
+				<a class="logo" href="index.html"><i></i></a>
+				<!-- 登录前 -->
+				<div class="login-before">
+					<a class="login" href="javascript:;" onclick="showLogin();">登录</a>
+					<a class="register" href="javascript:;" onclick="showRegister();">注册</a>
+				</div>
+				<!-- 登录后 -->
+				<div class="login-after" style="display:none;">
+					<a href="">User 上午好！</a>
+				</div>
+			</div>
+		</div>
+		<div class="confirm-order-content">
+			<div class="nav w1050">
+				<i></i><a href="index.html">首页</a><em class="arrow-right"></em><a href="">广州酒店预订</a><em class="arrow-right"></em><a href="confirmOrder.html">填写订单</a> 
+			</div>
+			<div class="confirm-order-content-info w1050">
+				<div class="coci-left">					
+					<div class="book-info">
+						<div class="title">
+							<h2>预订信息</h2>
+							<!-- 登陆后以下p标签是不显示的，未登录才显示的 begin-->
+							<p><a href="javascript:;" onclick="showLogin();">马上登录</a>，预订当前客房最高享86折优惠</p>
+							<!-- 登陆后以下p标签是不显示的，未登录才显示的 end-->
+						</div>
+						<div class="items">
+							<em>入住日期：</em>
+							<span><time class="inDay">2017-10-24</time><i>至</i><time class="outDay">2017-10-26</time> 共<time class="number"></time>晚</span>
+							<a href="javascript:;" onclick="reviseDate($(this));">修改日期</a>
+							<div class="date">
+								<div id="date">
+									<h6 class="arrow-bottom" id="checkInDay" class="check-in-day"></h6>
+									<span>至</span>
+									<h6 class="arrow-bottom" id="checkOutDay" class="check-out-day"></h6>
+									<span>共<time class="num" id="num"></time>晚</span>
+								</div>
+								<a href="javascript:;" onclick="confirmDate($(this))">确认修改</a>
+							</div>
+						</div>
+						<div class="items"><em>入住房型：</em><span>精选大床房</span></div>
+						<div class="items">
+							<em>房 间 数 ：</em>
+							<div class="room-num">
+								<i class="minus" onclick="minusRoomNum($(this));"></i>
+								<label><input type="text" id="roomNum" value="1"></label>
+								<i class="add on" onclick="addRoomNum($(this));"></i>
+							</div>
+						</div>
+						<div class="items">
+							<em>优 惠 券 ：</em>
+							<div class="coupon select arrow-bottom" onclick="selectCoupon();">10元优惠券</div>
+						</div>
+						<div class="items">
+							<em>更多特权：</em>
+							<div class="breakfast select arrow-bottom" onclick="selectPrivilege();">自助早餐券</div>
+						</div>
+					</div>
+					<div class="live-info">
+						<div class="title"><h2>入住信息</h2></div>
+						<div class="items">
+							<em><i>*</i> 入 住 人 ：</em>
+							<label><input type="text" placeholder="入住人姓名"></label>
+							<span>必须与入住时所持有效证件姓名保持一致</span>
+						</div>
+						<div class="items">
+							<em><i>*</i> 手机号码： </em>
+							<label><input type="text" placeholder="入住人手机号"></label>
+							<span>预订成功后会向您发送短信通知</span>
+						</div>
+						<!-- 登陆后以下class items 是不显示的，未登录才显示的 begin-->
+						<div class="items">
+							<em><i>*</i> 图 片 码 ：</em>
+							<label><input type="text" placeholder="入住人手机号"></label>
+							<div class="img"><img src="images/login_code.jpg" alt=""></div>
+							<i></i>
+						</div> 
+						<div class="items">
+							<em><i>*</i> 手机号码：</em>
+							<label><input type="text" placeholder="请输入短信验证码"></label>
+							<a href="">获取验证码</a>
+						</div>
+						<!-- 登陆后以下class items 是不显示的，未登录才显示的 end-->
+					</div>
+					<div class="order-price">
+						<div class="title"><h2>订单价格</h2></div>
+						<p><em>订单总额：</em><span>¥ 258</span></p>
+						<p><em>优惠减免：</em><span>- ¥10</span></p>
+						<p><em>实际支付：</em><span class="money">¥ 248</span></p>
+						<div class="btn">
+							<a href="orderPay.html">提交订单</a>
+							<div class="hide-footer" style="display:block;">
+								<div class="w1050">
+									<div class="left">
+										<div class="l">
+											<h3>实际支付： <span>¥ 248</span></h3>
+											<p>已优惠减免10元</p>
+										</div>
+										<a href="orderPay.html">提交订单</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="coci-right">
+					<div class="img">
+						<img src="images/room.jpg" alt="">
+					</div>
+					<h2 class="name">宜尚酒店广州客村地铁站琶洲会展店</h2>
+					<p>广州海珠区艺苑南路13-27号自编26号</p>
+					<h2>精选大床房</h2>
+					<p>床型：1.8*2.0m大床</p>
+					<p>早餐：含早</p>
+					<p>上网 ：WIFI、有线宽带免费</p>
+ 					<h2>订单政策</h2>	
+ 					<p class="policy">1、请于入住日中午12:00后办理入住，如提前到店，视酒店空房情况安排</p>
+					<p class="policy">2、本订单最晚保留时间20:00，若到店时间较晚，建议预付房费订单房间将为您整晚保留；</p>
+					<p class="policy">3、预付房费后，如需取消订单/申请退款，请在入住当日18:00前联系酒店前台确认。</p>
+					<p class="policy">4、如需发票请向前台索取</p>
+					<h2>客服中心</h2>
+					<p>客服电话：400-700-7899</p>
+				</div>
+			</div>
+		</div>
+		<div class="order-footer">
+			<p class="title">
+				<a href="#">东呈快讯</a>
+				<a href="#">酒店加盟</a>
+				<a href="#">职位招聘</a>
+				<a href="#">联系我们</a>
+			</p>
+			<p class="text"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45010302000124"><i></i><span>桂公网安备 45010302000124号</span></a><em>|</em>桂ICP备07500682号<em>|</em>东呈酒店集团版权所有 广州东呈酒店投资管理集团有限公司</p>
+		</div>
+	</div>
+	<!-- iframe 内容 begin -->
+	<iframe class="J_iframe" id="iframe" name="iframe" width="100%" height="100%" src="login.html" frameborder="0"></iframe>
+	<!-- iframe 内容 end -->
+	<!-- 覆盖层 begin-->
+	<div class="mask"></div>
+	<!-- 覆盖层 end-->
+	<!-- 选择优惠券 begin -->
+	<div class="choose-coupon">
+		<div class="choose-coupon-close" onclick="closeCoupon();">
+			<div class="cc-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="title"><h2>选择优惠券</h2></div>
+		<div class="select-date">
+			<div class="date-list swiper-container">
+				<ul class="swiper-wrapper">
+					<!-- <li>
+						<p class="date">10-18（周五）</p>
+						<p class="untapped">未使用</p>
+					</li>-->
+				</ul>
+			</div>
+			<div class="swiper-button-prev prev"></div>
+			<div class="swiper-button-next next"></div>
+		</div>
+		<div class="choose-coupon-list">
+			<ul>
+				<!-- <li>
+					<div class="choose-icon">
+					</div>	
+					<div class="r">
+						<div class="r-left">
+							<span>¥</span>
+							<h2>10</h2>
+						</div>
+						<div class="text">
+							<h2><em>代金券</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li> -->
+			</ul>
+		</div>
+		<p class="arrow-bottom" onclick="kindlyRminder();">温馨提示： 为什么不能再选择优惠了？</p>
+		<div class="btn"><a href="javascript:;">确认使用</a></div>
+	</div>
+	<!-- 选择优惠券 end -->
+	<!-- 选择特权券 begin -->
+	<div class="choose-privilege">
+		<div class="choose-privilege-close" onclick="closePrivilege();">
+			<div class="cp-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="title"><h2>选择特权券</h2></div>
+		<div class="choose-privilege-list">
+			<ul>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券1</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券2</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券3</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券1</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券2</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券3</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券1</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券2</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="choose-icon"></div>	
+					<div class="r">
+						<i></i>
+						<div class="text">
+							<h2><em>自助早餐券3</em><span>（城市便捷专享）</span></h2>
+							<p>全国门店通用</p>
+							<p>有效期：2017-11-20</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="btn"><a href="javascript:;" onclick="makePrivilege();">确认使用</a></div>
+	</div>
+	<!-- 选择特权券 end -->
+	<!-- 温馨提示： 为什么不能再选择优惠了？ begin-->
+	<div class="kindly-reminder">
+		<div class="user-serve-close" onclick="hideKindlyRminder();">
+			<div class="us-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="title"><h3>优惠券使用规则</h3><div class="line"></div></div>
+		<div class="user-serve-clause">
+			<h3>1 优惠券使用类型</h3>
+			<p>每个订单仅限使用同一种类型的优惠券，比如选择使用9折折扣券则不能再选择10元满减券；</p>
+			<h3>2 优惠券可用数量</h3>
+			<p>每个订单可使用优惠券数量等于预订房间数，比如预订了3间房，则每天可使用优惠券数量为3；</p>
+			<h3>3 优惠券使用限制</h3>
+			<p>-每个订单折扣券可叠加使用；</p>
+			<p>-每个订单免房券可叠加使用；</p>
+			<p>-每个订单满减券可叠加使用，使用规则如下：</p>
+			<p>-满减券的限制金额总和不可超过订单金额；</p>
+			<p>示例：如订单金额600元，则可以使用3*满200减20元优惠券，或1*满100减10元+1*满200减20元+1*满300减30元满减券，以此类推。</p>
+		</div>
+		<div class="btn-hide"><a href="javascript:;" onclick="hideKindlyRminder();">同意并继续</a></div>
+	</div>
+	<!-- 温馨提示： 为什么不能再选择优惠了？ end-->
+	<!-- script begin -->
+	<script src="plugins/jquery/jquery-1.10.1.min.js"></script>
+	<script src="plugins/swiper/swiper-3.4.2.min.js"></script>
+	<script src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="scripts/loginRegister.js"></script>
+	<script src="plugins/moment.js"></script>
+	<script src="plugins/picker/jquery.daterangepicker.js"></script>
+	<script language="javascript"> 
+		$(document).ready(function(){
+			//等高
+			var leftHeight=$(".coci-left").outerHeight();
+			var rightHeight=$(".coci-right").outerHeight();
+			if(leftHeight>rightHeight){
+				$(".coci-right").outerHeight(leftHeight);
+			}else if(leftHeight<rightHeight){
+				$(".coci-left").outerHeight(rightHeight);
+			}else{
+				return false;
+			}
+			//提交切换
+			$(window).scroll(function(event){
+				var hideFooterHeight=$(".hide-footer").height();
+				var windowHeight=$(window).height();
+				var objTop=$(".confirm-order-content-info .coci-left .order-price .btn").offset().top;
+				var scrollTop=$(document).scrollTop();
+				var scrollHeight=windowHeight+scrollTop-hideFooterHeight;
+				if(scrollHeight>=objTop){
+					$(".hide-footer").hide();
+				}else{
+					$(".hide-footer").show();
+				}
+			});
+			
+			//选择特权券列表
+			$(".choose-privilege-list ul li").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			});
+			$(".choose-privilege-list").slimScroll({
+		        height: '306px'
+		    });
+
+		    //选择优惠券列表
+		    $(".choose-coupon-list").slimScroll({
+		        height: '306px'
+		    });
+		    var price=200;
+		    //调用json
+		    $.ajax({
+			    url: 'http://10.44.61.27/dongchenghotels/data/CouponList.json',
+			    type: 'GET',
+			    dataType: 'json',
+			    data: {},
+			    success: function(data){
+			    	console.log(data);
+			    	//调用data日期列表
+			        var hotelListBox = $(".date-list ul");
+			        var htmlArray="";
+			        var weekArr=['周一','周二','周三','周四','周五','周六','周日'];
+					if(data.PricesRp != null && data.PricesRp.length > 0){
+					 	for(var i=0;data.PricesRp.length>i;i++){
+					 		var discount=data.PricesRp[i].RackFee-data.PricesRp[i].RoomFee;
+					 		var weeks=weekArr[new Date(data.PricesRp[i].BizDay).getDay()];
+			        		htmlArray+='<li class="swiper-slide" data-id="'+i+'">';
+				        	htmlArray+='<p class="date">'+data.PricesRp[i].BizDay.slice(5,-8)+'('+weeks+')'+'</p>';
+				        	htmlArray+='<p class="untapped">未使用</p>';
+				        	htmlArray+='<em></em>';
+				        	htmlArray+='</li>';
+				        }
+					}
+			        hotelListBox.append(htmlArray);
+
+			        	var mySwiper = new Swiper('.swiper-container',{
+			        		slidesPerView : 5,
+			        		slidesPerGroup : 5,
+						    prevButton:'.swiper-button-prev',
+							nextButton:'.swiper-button-next',
+						})
+
+					//点击data日期列表
+					$(".date-list ul li").eq(0).addClass("active");
+					$(".date-list ul li").on("click",function(){
+						$(this).addClass("active").siblings().removeClass("active");
+						var dataId=$(this).attr("data-id");
+						$(".choose-coupon-list ul li.on").hide();
+						$('.choose-coupon-list ul li[data-id="'+dataId+'"]').show();	
+					});
+					//调用data优惠券列表
+					var hotelItems=$(".choose-coupon-list ul");
+					var htmlItems="";
+					if(data.CouponRp.Coupons != null && data.CouponRp.Coupons.length > 0){
+					 	for(var i=0;data.CouponRp.Coupons.length>i;i++){
+					 		if(data.CouponRp.Coupons[i].CostValue>1){
+			        		htmlItems+='<li data-num="'+data.CouponRp.Coupons[i].CostValue+'" data-type="'+data.CouponRp.Coupons[i].CouponDiscountType+'">';
+			        	    }else{
+			        	    	htmlItems+='<li data-num="'+data.CouponRp.Coupons[i].CostValue*price+'" data-type="'+data.CouponRp.Coupons[i].CouponDiscountType+'">';
+			        	    }
+			        		htmlItems+='<div class="choose-icon"></div>';
+				        	htmlItems+='<div class="r">';
+				        	htmlItems+='<div class="r-left">';
+				        	if(data.CouponRp.Coupons[i].CostValue>1){
+				        		htmlItems+='<span>¥</span><h2>'+data.CouponRp.Coupons[i].Name.replace(/元优惠券/, "")+'</h2>';
+				        	}else{
+				        		htmlItems+='<h2 class="discount">'+data.CouponRp.Coupons[i].Name.replace(/折/, "")+'<span>折</span></h2>';
+				        	}
+				        	htmlItems+='</div>';
+				        	htmlItems+='<div class="text">';
+				        	htmlItems+='<h2><em>代金券</em><span>（城市便捷专享）</span></h2>';
+				        	htmlItems+='<p>'+data.CouponRp.Coupons[i].EnableHotels+'</p>';
+				        	htmlItems+='<p>有效期：'+data.CouponRp.Coupons[i].EndTime.replace(/00:00:00/, "")+'</p>';
+				        	htmlItems+='</div>';
+				        	htmlItems+='</div>';
+				        	htmlItems+='</li>';
+				        }
+					}
+					hotelItems.append(htmlItems);
+
+					//选择优惠券列表	
+					$(".choose-coupon .choose-icon").on("click",function(even){
+						even.stopPropagation();
+
+						//点击不同类型显示不同类型
+		                if($(this).parent().hasClass('disabled')){
+		                	return;
+		                }		
+
+		                var type=$(this).parent().attr("data-type"); //房间原始价格
+						CouponDiscountType(type,"不可用原因：不能与当前选中优惠劵类型同用");
+
+
+						
+		          		var sun=0;
+						var dataId=$(".date-list ul li.active").attr("data-id");
+						if(!$(this).parent().hasClass("on")){
+							$(this).parent().addClass("on");
+							$(this).parent().attr('data-id', dataId);
+							sum=discountPrice(dataId,type,price);
+							//$(".date-list ul .active .untapped").html("已优惠<em>"+sum+"</em>元");                   
+						}else{
+							//判断当前是否只有一个被点击
+							if($(".choose-coupon-list ul li.on").length==1){
+								CouponDiscountTypeReset(type);
+							}				
+							$(this).parent().removeClass("on");
+							$(this).parent().attr('data-id', '');
+							sum=discountPrice(dataId,type,price);
+						}
+						
+						if(sum==0){
+							$(".date-list ul .active .untapped").html("未使用");
+						}else{
+							$(".date-list ul .active .untapped").html("已优惠"+sum+"元");
+						}	
+					});
+					//确认使用优惠券
+					$(".choose-coupon .btn a").on("click",function(){
+						var allSum=0;
+						$(".choose-coupon-list ul .on").each(function(index, element){
+							allSum +=parseInt($(this).attr("data-num"));	
+						});
+						closeCoupon();
+						$(".coupon").text("已优惠"+allSum+"元");
+					});
+
+			    },
+			    error: function(){
+			        console.log('error')
+			    }
+			});
+
+			//日历
+			var inDay=$(".inDay").text();
+			var outDay=$(".outDay").text();
+
+			var startDate=new Date(inDay);
+            var endDate=new Date(outDay);
+
+			var countDown=endDate.getTime()-startDate.getTime();
+			var number=parseInt(countDown/(24*60*60))/1000;
+			$(".number").html(number);
+
+			$("#checkInDay").html($(".inDay").html());
+			$("#checkOutDay").html($(".outDay").html());
+
+		    //初始化number晚
+		    var num=$("#checkInDay").html()-$("#checkOutDay").html();
+		    $("#num").html(num);
+		    $("#num").html(number);
+
+			$('#date').dateRangePicker({
+				autoClose: true,
+				format: 'YYYY-MM-DD',
+				separator: ' to ',
+				language: 'cn',
+				startOfWeek: 'sunday',
+				startDate: new Date(),  //默认今天开始
+		        getValue: function()    //选择开始和结束的日期
+		        {
+		          if ($('#checkInDay').html() && $('#checkOutDay').html() )
+		            return $('#checkInDay').html() + ' to ' + $('#checkOutDay').html();
+		          else
+		            return '';
+		        },
+		        setValue: function(s,s1,s2)  //回调页面上
+		        {
+		          $('#checkInDay').html(s1);
+		          $('#checkOutDay').html(s2);
+		        },
+		        showDateFilter: function(time, date)   //今天显示
+		        {   
+		         var html='<div style="padding:0 5px;">';
+		             html+='<span style="font-size:12px;">'+date+'</span>';
+		             html+='<div style="opacity:1;"></div>';
+		             html+='</div>';
+		          return html;
+		        },
+		        showShortcuts:false,   //去掉快捷html
+		        inline:false,
+		        singleMonth:false,  //true显示1个月，false为2个月
+		        batchMode:true,
+		        stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
+		        // extraClass:'dengcb',  //添加class
+		        showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
+		        selectForward:false,   //true选择开始的时间前面就不能选，默认false
+		        selectBackward:false,  //true只能选择1天 
+				showTopbar: false      //去掉头部显示日期
+			});
+
+		});
+		//修改日期
+		function reviseDate(obj){
+			obj.hide();
+			obj.prev().hide();
+			obj.next().show();
+		}
+		//确认修改
+		function confirmDate(obj){
+			obj.parent().hide();
+			obj.parent().prev().show();
+			obj.parent().prev().prev().show();
+			$(".inDay").html($("#checkInDay").html());
+			$(".outDay").html($("#checkOutDay").html());
+			$(".number").html($("#num").html());
+		}
+		//加房间数
+		function addRoomNum(obj){
+			var i=$("#roomNum").val();
+			if(i<=2){
+				i++;
+				obj.prev().prev().addClass("on");
+			}else{
+				obj.removeClass("on");
+				return false;
+			}
+			
+			$("#roomNum").val(i);
+		}
+		//减房间数
+		function minusRoomNum(obj){
+			var i=$("#roomNum").val();
+			if(i>=2){
+				i--;
+				obj.next().next().addClass("on");
+			}else{
+				obj.removeClass("on");
+				return false;
+			}
+			$("#roomNum").val(i);
+		}
+
+		//选择特权劵
+		function selectPrivilege(){
+			$(".mask").show();
+			$(".choose-privilege").addClass("on");
+		}
+		//关闭选择特权劵
+		function closePrivilege(){
+			$(".mask").hide();
+			$(".choose-privilege").removeClass("on");
+		}
+		//确认使用特权劵
+		function makePrivilege(){
+			var objText=$(".choose-privilege .choose-privilege-list ul li.on .r .text h2 em").text();
+			$(".breakfast").text(objText);
+			closePrivilege();
+		}
+
+		//选择优惠券
+		function selectCoupon(){
+			$(".mask").show();
+			$(".choose-coupon").addClass("on");
+		}
+		//关闭选择优惠券
+		function closeCoupon(){
+			$(".mask").hide();
+			$(".choose-coupon").removeClass("on");
+		}
+
+		//温馨提示： 为什么不能再选择优惠了？
+		function kindlyRminder(){
+
+		}
+		function kindlyRminder(){
+			$('.choose-coupon').removeClass('on');
+			$(".kindly-reminder").addClass("on");
+		}
+		function hideKindlyRminder(){
+			$('.choose-coupon').addClass('on');
+			$(".kindly-reminder").removeClass("on");
+		}
+
+		//优惠价格的方法
+		function discountPrice(dataId,type,price){
+			var sum=0;
+			// if(type==2){
+			// 	//折扣
+			// 	$(".choose-coupon-list ul li[data-id='"+dataId+"']").each(function(index, element){
+			// 		sum +=parseInt(price-($(this).attr("data-num"))*price);
+			// 	});			
+			// }else if(type==3){
+				//优惠
+				$(".choose-coupon-list ul li[data-id='"+dataId+"']").each(function(index, element){
+					sum +=parseInt($(this).attr("data-num"));		
+				});			
+			// }
+			return sum;
+		}
+		//区分类型显示灰色 type:当前显示的type
+		function CouponDiscountType(type,msg){
+			$('.choose-coupon-list ul li').each(function(val, index) {
+				var that=$(this);
+				if(that.attr('data-type')!=type){
+					that.addClass('disabled');
+					if(msg!="" || msg){
+						that.find('.msg').html(msg)
+					}else{
+						that.find('.msg').hide();
+					}
+				}
+			});
+		}
+		//灰色类型还原显示  type:当前显示的type
+		function CouponDiscountTypeReset(type){
+			$('.choose-coupon-list ul li').each(function(val, index) {
+				var that=$(this);
+				if(that.attr('data-type')!=type){
+					that.removeClass('disabled');
+				}
+			});
+		}
+	</script>
+	<!-- script end -->
+</body>
+</html>

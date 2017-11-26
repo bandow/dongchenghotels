@@ -1,0 +1,1220 @@
+@import 'public/base';
+.mask{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:101;
+	display:none;
+	background-color:$black;
+	opacity:.5;
+}
+.login-register-mask{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:40px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:510px;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.login-register-mask-close{
+		position:absolute;
+		top:0;
+		right:5px;
+		width:36px;
+		height:50px;
+		background-color:#eaeaea;
+		border-radius:0 0 30px 30px;
+		cursor:pointer;
+		.lrmc-content{
+			padding:3px 5px 0;
+			margin:17px 3px 3px 3px;
+			width:30px;
+			height:30px;
+			background-color:$white;
+			border-radius:100%;
+			a{ 
+			 	display:inline-block;
+			 	width:20px;
+			 	height:1px; 
+			 	background:$themeColor;
+			 	line-height:0;
+			 	font-size:0;
+			 	vertical-align:middle;
+			 	@include transform(rotate(45deg));
+			 	@include transition(all .5s);
+			 	&:after{
+			 		content:'/';
+			 		display:block;
+			 		width:20px;
+			 		height:1px; 
+			 		background:$themeColor;
+			 		@include transform(rotate(90deg));
+			 	}
+			}
+			&:hover{
+				a{@include transform(rotate(225deg));}
+		 	}
+		}
+	}
+	.title{
+		margin-bottom:20px;
+		ul{
+			position:relative;
+			height:35px;
+			.line{
+				position:absolute;
+				left:50px;
+				bottom:0;
+				width:80px;
+				height:2px;
+				background-color:$themeColor;
+				@include transition(all .5s);
+			}
+		}
+		ul li{
+			position:relative;
+			float:left;
+			width:180px;
+			font:bold 18px/1.5 $publicFont;
+			color:$TitleTextColor;
+			text-align:center;
+			padding-bottom:8px; 
+			cursor:pointer;
+			>p{
+				position:absolute;
+				top:-25px;
+				left:50%;
+			    margin-left: -35px;
+				width:70px;
+				font:12px/1.5 SimSun,$publicFont;
+				color:$white;
+				text-align:center;
+				background-color:#f3869d;
+				border-radius:3px;
+				@include animation(myAnimation .5s infinite);
+				&:before{
+					position:absolute;
+					left:50%;
+					bottom:-8px;
+					margin-left:-4px;
+					content:"";
+					width:0;
+					height:0;
+					border:4px solid;
+					border-color:#f3869d transparent transparent transparent;
+				}
+			}
+		}
+		ul li.active{
+			color:$themeColor;
+		}
+	}
+}
+
+@include keyframes(myAnimation) { 
+	from {top:-25px;}
+	to {top:-30px;}
+}
+
+.login-register-mask.on{
+	margin:-255px 0 0 -220px;
+}
+.login-register-content{
+	.items{display:none;}
+	.login-content{
+		label{
+			position:relative;
+			font-size:0;
+			padding:0 20px;
+			margin-bottom:30px;
+			display:block;
+			width:100%;
+			height:46px;
+			border:1px solid $lineColor;
+			border-radius:3px;
+			overflow:hidden;
+			input{
+				width:100%;
+				height:100%;
+				background:none;
+				border:none;
+				outline:none;
+				font:14px/2 $publicFont;
+				color:#1e1e1e;
+				&::-webkit-input-placeholder{
+					color:$promptTextColor;
+				}
+			}
+			p{
+				position:absolute;
+				left:0;
+				bottom:-28px;
+				i{
+					margin-top:5px;
+					width:15px;
+					height:15px;
+					float:left;
+				    background-position:-478px 0;
+				}
+				span{
+					margin-left:5px;
+					float:left;
+					font:13px/2 $publicFont;
+					color:$themeColor;
+				}
+			}
+		}
+		label.code{
+			input{float:left;width:60%;}
+			img{float:left;margin:6px 5px 0 6px;}
+			>i{
+				margin:13px 0 0 3px;
+				float:left;
+				width:20px;
+				height:20px;
+				display:block;
+				background-position:-453px 0;
+				cursor:pointer;
+			}
+		}
+		.btn{
+			border-radius:5px;
+			overflow:hidden;
+			a{
+				display:block;
+				background-color:#f3b5c4;
+				font:bold 18px/46px $publicFont;
+				color:$white;
+				text-align:center;
+			}
+		}
+		.btn-hide{
+			border-radius:5px;
+			overflow:hidden;
+			display:none;
+			a{
+				display:block;
+				background-color:$themeColor;
+				font:bold 18px/46px $publicFont;
+				color:$white;
+				text-align:center;
+				&:hover{
+					background-color:#9e1a42;
+				}
+			}
+		}
+		.phone-align{
+			display:block;
+			a{font:bold 14px/3 $publicFont;color:$TitleTextColor;}
+			a.password{float:right;}
+			a:hover{
+				color:$themeColor;
+			}
+		}
+		.other-align{
+			margin-top:20px;
+			overflow:hidden;
+			span{float:left;font:bold 14px/2.4 $publicFont;color:$TitleTextColor;}
+			a{margin-left:20px;margin-top:5px;display:block;float:left;}
+			.Wechat{
+				width:26px;
+				height:22px;
+				background-position:-388px -25px;
+				&:hover{
+					background-position:-388px -51px;
+				}
+			}
+			.sina{
+				width:27px;
+				height:22px;
+				background-position:-419px -25px;
+				&:hover{
+					background-position:-419px -51px;
+				}
+			}
+			.qq{
+				width:22px;
+				height:22px;
+				background-position:-453px -25px;
+				&:hover{
+					background-position:-453px -51px;
+				}
+			}
+		}
+	}
+	.register-content{
+		label{
+			position:relative;
+			font-size:0;
+			padding:0 20px;
+			margin-bottom:30px;
+			display:block;
+			width:100%;
+			height:46px;
+			border:1px solid $lineColor;
+			border-radius:3px;
+			overflow:hidden;
+			input{
+				width:100%;
+				height:100%;
+				background:none;
+				border:none;
+				outline:none;
+				font:14px/2 $publicFont;
+				color:#1e1e1e;
+				&::-webkit-input-placeholder{
+					color:$promptTextColor;
+				}
+			}
+			p{
+				position:absolute;
+				left:0;
+				bottom:-28px;
+				i{
+					margin-top:5px;
+					width:15px;
+					height:15px;
+					float:left;
+				    background-position:-478px 0;
+				}
+				span{
+					margin-left:5px;
+					float:left;
+					font:13px/2 $publicFont;
+					color:$themeColor;
+				}
+				
+			}
+		}
+		label.code{
+			input{float:left;width:60%;}
+			img{float:left;margin:6px 5px 0 6px;}
+			>i{
+				margin:13px 0 0 3px;
+				float:left;
+				width:20px;
+				height:20px;
+				display:block;
+				background-position:-453px 0;
+				cursor:pointer;
+			}
+		}
+		label.phone-code{
+			input{float:left;width:60%;}
+			a{
+				padding:0 0 0 20px;
+				margin-top:8px;
+				border-left:1px solid $lineColor;
+				float:left;
+				display:block;
+				font:14px/30px $publicFont;
+				color:$promptTextColor;
+			}
+		}
+		.btn{
+			border-radius:5px;
+			overflow:hidden;
+			a{
+				display:block;
+				background-color:#f3b5c4;
+				font:bold 18px/46px $publicFont;
+				color:$white;
+				text-align:center;
+			}
+		}
+		.btn-hide{
+			border-radius:5px;
+			overflow:hidden;
+			display:none;
+			a{
+				display:block;
+				background-color:$themeColor;
+				font:bold 18px/46px $publicFont;
+				color:$white;
+				text-align:center;
+				&:hover{
+					background-color:#9e1a42;
+				}
+			}
+		}
+		>p{
+			font:bold 14px/3 $publicFont;
+			color:$TitleTextColor;
+			a{color:$themeColor;}
+		}
+	}
+}
+.retrieve-password{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:40px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:auto;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.retrieve-password-close{
+		position:absolute;
+		top:0;
+		right:5px;
+		width:36px;
+		height:50px;
+		background-color:#eaeaea;
+		border-radius:0 0 30px 30px;
+		cursor:pointer;
+		.rpc-content{
+			padding:3px 5px 0;
+			margin:17px 3px 3px 3px;
+			width:30px;
+			height:30px;
+			background-color:$white;
+			border-radius:100%;
+			a{ 
+			 	display:inline-block;
+			 	width:20px;
+			 	height:1px; 
+			 	background:$themeColor;
+			 	line-height:0;
+			 	font-size:0;
+			 	vertical-align:middle;
+			 	@include transform(rotate(45deg));
+			 	@include transition(all .5s);
+			 	&:after{
+			 		content:'/';
+			 		display:block;
+			 		width:20px;
+			 		height:1px; 
+			 		background:$themeColor;
+			 		@include transform(rotate(90deg));
+			 	}
+			}
+			&:hover{
+				a{@include transform(rotate(225deg));}
+		 	}
+		}
+	}
+	.retrieve-password-go-back{
+		position:absolute;
+		top:20px;
+		left:40px;
+		width:30px;
+		height:30px;
+		cursor:pointer;
+		a{
+			display:block;
+			width:30px;
+			height:30px;
+			background-position:-76px -51px;
+		}
+	}
+	.title{
+		position:relative;
+		margin-bottom:25px;
+		h3{
+			font:bold 18px/1.5 $publicFont;
+			color:$themeColor;
+			text-align:center;
+		}
+		.line{
+			position:absolute;
+			left:50%;
+			bottom:-5px;
+			width:80px;
+			height:2px;
+			margin-left:-40px;
+			background-color:$themeColor;
+			@include transition(all .5s);
+		}
+	}
+	label{
+		position:relative;
+		font-size:0;
+		padding:0 20px;
+		margin-bottom:30px;
+		display:block;
+		width:100%;
+		height:46px;
+		border:1px solid $lineColor;
+		border-radius:3px;
+		overflow:hidden;
+		input{
+			width:100%;
+			height:100%;
+			background:none;
+			border:none;
+			outline:none;
+			font:14px/2 $publicFont;
+			color:#1e1e1e;
+			&::-webkit-input-placeholder{
+				color:$promptTextColor;
+			}
+		}
+		p{
+			position:absolute;
+			left:0;
+			bottom:-28px;
+			i{
+				margin-top:5px;
+				width:15px;
+				height:15px;
+				float:left;
+			    background-position:-478px 0;
+			}
+			span{
+				margin-left:5px;
+				float:left;
+				font:13px/2 $publicFont;
+				color:$themeColor;
+			}
+			
+		}
+	}
+	label.code{
+		input{float:left;width:60%;}
+		img{float:left;margin:6px 5px 0 6px;}
+		>i{
+			margin:13px 0 0 3px;
+			float:left;
+			width:20px;
+			height:20px;
+			display:block;
+			background-position:-453px 0;
+			cursor:pointer;
+		}
+	}
+	label.code{
+		input{float:left;width:60%;}
+		img{float:left;margin:6px 5px 0 6px;}
+		>i{
+			margin:13px 0 0 3px;
+			float:left;
+			width:20px;
+			height:20px;
+			display:block;
+			background-position:-453px 0;
+			cursor:pointer;
+		}
+	}
+	label.phone-code{
+		input{float:left;width:60%;}
+		a{
+			padding:0 0 0 20px;
+			margin-top:8px;
+			border-left:1px solid $lineColor;
+			float:left;
+			display:block;
+			font:14px/30px $publicFont;
+			color:$promptTextColor;
+		}
+	}
+	.btn{
+		border-radius:5px;
+		overflow:hidden;
+		a{
+			display:block;
+			background-color:#f3b5c4;
+			font:bold 18px/46px $publicFont;
+			color:$white;
+			text-align:center;
+		}
+	}
+	.btn-hide{
+		border-radius:5px;
+		overflow:hidden;
+		display:none;
+		a{
+			display:block;
+			background-color:$themeColor;
+			font:bold 18px/46px $publicFont;
+			color:$white;
+			text-align:center;
+			&:hover{
+				background-color:#9e1a42;
+			}
+		}
+	}
+}
+.retrieve-password.on{
+	margin:-255px 0 0 -220px;
+}
+.register-success{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:40px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:auto;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.register-success-close{
+		position:absolute;
+		top:0;
+		right:5px;
+		width:36px;
+		height:50px;
+		background-color:#eaeaea;
+		border-radius:0 0 30px 30px;
+		cursor:pointer;
+		.register-success-content{
+			padding:3px 5px 0;
+			margin:17px 3px 3px 3px;
+			width:30px;
+			height:30px;
+			background-color:$white;
+			border-radius:100%;
+			a{ 
+			 	display:inline-block;
+			 	width:20px;
+			 	height:1px; 
+			 	background:$themeColor;
+			 	line-height:0;
+			 	font-size:0;
+			 	vertical-align:middle;
+			 	@include transform(rotate(45deg));
+			 	@include transition(all .5s);
+			 	&:after{
+			 		content:'/';
+			 		display:block;
+			 		width:20px;
+			 		height:1px; 
+			 		background:$themeColor;
+			 		@include transform(rotate(90deg));
+			 	}
+			}
+			&:hover{
+				a{@include transform(rotate(225deg));}
+		 	}
+		}
+	}
+	.title{
+		h2{
+			margin:0 auto 20px;
+			width:255px;
+			overflow:hidden;
+			i{
+				float:left;
+			 	display:inline-block;
+			 	width:45px;
+			 	height:53px;
+			 	background-position:-108px -51px;
+			}
+			span{
+				float: left;
+				margin-left:10px;
+				display:inline-block;
+			 	font:bold 22px/53px $publicFont;
+			 	color:$TitleTextColor
+			}
+		}
+		h5{
+			font:15px/1.5 $publicFont;
+			color:#696969;
+			text-align:center;
+			span{
+				color:$themeColor;
+			}
+		}	
+	}
+	.register-success-content{
+		.gift{
+			margin:30px auto;
+			width:186px;
+			height:93px;
+			background-position:0 -108px;
+			h2{
+				text-align:center;
+				color:$white;
+				font:20px/1.5 $publicFont;
+				span{
+					padding:0 5px;
+					font-size:62px;
+					font-weight:bold;
+				}
+			}
+		}
+		h5{
+			margin-bottom:15px;
+			font:14px/1.5 $publicFont;
+			color:#575757;
+		}
+		p{
+			font:14px/1.5 $publicFont;
+			color:#575757;
+		}
+	}
+	.btn{
+		margin-top:25px;
+		border-radius:5px;
+		overflow:hidden;
+		a{
+			display:block;
+			background-color:$themeColor;
+			font:bold 18px/46px $publicFont;
+			color:$white;
+			text-align:center;
+			&:hover{
+				background-color:#9e1a42;
+			}
+		}
+	}
+}
+.register-success.on{
+	margin:-255px 0 0 -220px;
+}
+.other-login{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:40px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:auto;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.other-login-close{
+		position:absolute;
+		top:0;
+		right:5px;
+		width:36px;
+		height:50px;
+		background-color:#eaeaea;
+		border-radius:0 0 30px 30px;
+		cursor:pointer;
+		.ol-content{
+			padding:3px 5px 0;
+			margin:17px 3px 3px 3px;
+			width:30px;
+			height:30px;
+			background-color:$white;
+			border-radius:100%;
+			a{ 
+			 	display:inline-block;
+			 	width:20px;
+			 	height:1px; 
+			 	background:$themeColor;
+			 	line-height:0;
+			 	font-size:0;
+			 	vertical-align:middle;
+			 	@include transform(rotate(45deg));
+			 	@include transition(all .5s);
+			 	&:after{
+			 		content:'/';
+			 		display:block;
+			 		width:20px;
+			 		height:1px; 
+			 		background:$themeColor;
+			 		@include transform(rotate(90deg));
+			 	}
+			}
+			&:hover{
+				a{@include transform(rotate(225deg));}
+		 	}
+		}
+	}
+	.user{
+		overflow:hidden;
+		.img{
+			float:left;
+			width:58px;
+			height:58px;
+			font-size:0;
+			border-radius:100%;
+			overflow:hidden;
+			img{
+				width:100%;
+				height:100%;
+			}
+		}
+		h3{
+			margin-left:68px;
+			font:16px/58px $publicFont;
+		 	color:$TitleTextColor
+		}
+	}
+	>p{
+		margin:20px 0;
+		font:14px/1.5 $publicFont;
+		color:$TitleTextColor;
+	}
+	.other-login-content{
+		label{
+			position:relative;
+			font-size:0;
+			padding:0 20px;
+			margin-bottom:30px;
+			display:block;
+			width:100%;
+			height:46px;
+			border:1px solid $lineColor;
+			border-radius:3px;
+			overflow:hidden;
+			input{
+				width:100%;
+				height:100%;
+				background:none;
+				border:none;
+				outline:none;
+				font:14px/2 $publicFont;
+				color:#1e1e1e;
+				&::-webkit-input-placeholder{
+					color:$promptTextColor;
+				}
+			}
+			p{
+				position:absolute;
+				left:0;
+				bottom:-28px;
+				i{
+					margin-top:5px;
+					width:15px;
+					height:15px;
+					float:left;
+				    background-position:-478px 0;
+				}
+				span{
+					margin-left:5px;
+					float:left;
+					font:13px/2 $publicFont;
+					color:$themeColor;
+				}
+			}
+		}
+		label.code{
+			input{float:left;width:60%;}
+			img{float:left;margin:6px 5px 0 6px;}
+			>i{
+				margin:13px 0 0 3px;
+				float:left;
+				width:20px;
+				height:20px;
+				display:block;
+				background-position:-453px 0;
+				cursor:pointer;
+			}
+		}
+		.btn{
+			border-radius:5px;
+			overflow:hidden;
+			a{
+				display:block;
+				background-color:#f3b5c4;
+				font:bold 18px/46px $publicFont;
+				color:$white;
+				text-align:center;
+				&:hover{
+					background-color:#9e1a42;
+				}
+			}
+		}
+		.btn-hide{
+			display:none;
+			border-radius:5px;
+			overflow:hidden;
+			a{
+				display:block;
+				background-color:$themeColor;
+				font:bold 18px/46px $publicFont;
+				color:$white;
+				text-align:center;
+				&:hover{
+					background-color:#9e1a42;
+				}
+			}
+		}
+	}
+}
+.other-login.on{
+	margin:-255px 0 0 -220px;
+}
+.phone-login{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:40px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:auto;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.phone-login-close{
+		position:absolute;
+		top:0;
+		right:5px;
+		width:36px;
+		height:50px;
+		background-color:#eaeaea;
+		border-radius:0 0 30px 30px;
+		cursor:pointer;
+		.pl-content{
+			padding:3px 5px 0;
+			margin:17px 3px 3px 3px;
+			width:30px;
+			height:30px;
+			background-color:$white;
+			border-radius:100%;
+			a{ 
+			 	display:inline-block;
+			 	width:20px;
+			 	height:1px; 
+			 	background:$themeColor;
+			 	line-height:0;
+			 	font-size:0;
+			 	vertical-align:middle;
+			 	@include transform(rotate(45deg));
+			 	@include transition(all .5s);
+			 	&:after{
+			 		content:'/';
+			 		display:block;
+			 		width:20px;
+			 		height:1px; 
+			 		background:$themeColor;
+			 		@include transform(rotate(90deg));
+			 	}
+			}
+			&:hover{
+				a{@include transform(rotate(225deg));}
+		 	}
+		}
+	}
+	.phone-login-go-back{
+		position:absolute;
+		top:20px;
+		left:40px;
+		width:30px;
+		height:30px;
+		cursor:pointer;
+		a{
+			display:block;
+			width:30px;
+			height:30px;
+			background-position:-76px -51px;
+		}
+	}
+	.title{
+		position:relative;
+		margin-bottom:25px;
+		h3{
+			font:bold 18px/1.5 $publicFont;
+			color:$themeColor;
+			text-align:center;
+		}
+		.line{
+			position:absolute;
+			left:50%;
+			bottom:-5px;
+			width:120px;
+			height:2px;
+			margin-left:-60px;
+			background-color:$themeColor;
+			@include transition(all .5s);
+		}
+	}
+	label{
+		position:relative;
+		font-size:0;
+		padding:0 20px;
+		margin-bottom:30px;
+		display:block;
+		width:100%;
+		height:46px;
+		border:1px solid $lineColor;
+		border-radius:3px;
+		overflow:hidden;
+		input{
+			width:100%;
+			height:100%;
+			background:none;
+			border:none;
+			outline:none;
+			font:14px/2 $publicFont;
+			color:#1e1e1e;
+			&::-webkit-input-placeholder{
+				color:$promptTextColor;
+			}
+		}
+		p{
+			position:absolute;
+			left:0;
+			bottom:-28px;
+			i{
+				margin-top:5px;
+				width:15px;
+				height:15px;
+				float:left;
+			    background-position:-478px 0;
+			}
+			span{
+				margin-left:5px;
+				float:left;
+				font:13px/2 $publicFont;
+				color:$themeColor;
+			}
+			
+		}
+	}
+	label.code{
+		input{float:left;width:60%;}
+		img{float:left;margin:6px 5px 0 6px;}
+		>i{
+			margin:13px 0 0 3px;
+			float:left;
+			width:20px;
+			height:20px;
+			display:block;
+			background-position:-453px 0;
+			cursor:pointer;
+		}
+	}
+	label.code{
+		input{float:left;width:60%;}
+		img{float:left;margin:6px 5px 0 6px;}
+		>i{
+			margin:13px 0 0 3px;
+			float:left;
+			width:20px;
+			height:20px;
+			display:block;
+			background-position:-453px 0;
+			cursor:pointer;
+		}
+	}
+	label.phone-code{
+		input{float:left;width:60%;}
+		a{
+			padding:0 0 0 20px;
+			margin-top:8px;
+			border-left:1px solid $lineColor;
+			float:left;
+			display:block;
+			font:14px/30px $publicFont;
+			color:$promptTextColor;
+		}
+	}
+	.btn{
+		border-radius:5px;
+		overflow:hidden;
+		a{
+			display:block;
+			background-color:#f3b5c4;
+			font:bold 18px/46px $publicFont;
+			color:$white;
+			text-align:center;
+		}
+	}
+	.btn-hide{
+		border-radius:5px;
+		overflow:hidden;
+		display:none;
+		a{
+			display:block;
+			background-color:$themeColor;
+			font:bold 18px/46px $publicFont;
+			color:$white;
+			text-align:center;
+			&:hover{
+				background-color:#9e1a42;
+			}
+		}
+	}
+	>a{
+		font:bold 14px/3 $publicFont;
+		color:$TitleTextColor;
+		&:hover{
+			color:$themeColor;
+		}
+	}
+}
+.phone-login.on{margin:-255px 0 0 -220px;}
+.binding{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:101;
+	background:rgba(0,0,0,.5);
+	.binding-content{
+		position:fixed;
+		top:50%;
+		left:50%;
+		z-index:102;
+		padding:40px;
+		margin:-1000px 0 0 -220px;
+		width:440px;
+		height:120px;
+		border-radius:3px;
+		background-color:$white;
+		h2{
+			margin:0 auto 20px;
+			width:255px;
+			overflow:hidden;
+			i{
+				float:left;
+			 	display:inline-block;
+			 	width:45px;
+			 	height:53px;
+			 	background-position:-108px -51px;
+			}
+			span{
+				float: left;
+				margin-left:10px;
+				display:inline-block;
+			 	font:bold 22px/53px $publicFont;
+			 	color:$themeColor;
+			}
+		}
+	}
+	.binding-content.on{
+		margin:-60px 0 0 -220px;
+	}
+}
+.settings-success{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:15px;
+	width:226px;
+	height:100px;
+	margin:-50px 0 0 -113px;
+	background:rgba(0,0,0,.8);
+	border-radius:5px;
+	i{
+		margin:0 auto;
+		display:block;
+		width:30px;
+		height:30px;
+		background-position:-164px -51px;
+	}
+	p{
+		font:bold 14px/3 $publicFont;
+	 	color:$white;
+	 	text-align:center;
+	}
+}
+.user-serve{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:40px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:510px;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.user-serve-close{
+		position:absolute;
+		top:0;
+		right:5px;
+		width:36px;
+		height:50px;
+		background-color:#eaeaea;
+		border-radius:0 0 30px 30px;
+		cursor:pointer;
+		.us-content{
+			padding:3px 5px 0;
+			margin:17px 3px 3px 3px;
+			width:30px;
+			height:30px;
+			background-color:$white;
+			border-radius:100%;
+			a{ 
+			 	display:inline-block;
+			 	width:20px;
+			 	height:1px; 
+			 	background:$themeColor;
+			 	line-height:0;
+			 	font-size:0;
+			 	vertical-align:middle;
+			 	@include transform(rotate(45deg));
+			 	@include transition(all .5s);
+			 	&:after{
+			 		content:'/';
+			 		display:block;
+			 		width:20px;
+			 		height:1px; 
+			 		background:$themeColor;
+			 		@include transform(rotate(90deg));
+			 	}
+			}
+			&:hover{
+				a{@include transform(rotate(225deg));}
+		 	}
+		}
+	}
+	.title{
+		position:relative;
+		margin-bottom:25px;
+		h3{
+			font:bold 18px/1.5 $publicFont;
+			color:$themeColor;
+			text-align:center;
+		}
+		.line{
+			position:absolute;
+			left:50%;
+			bottom:-5px;
+			width:120px;
+			height:2px;
+			margin-left:-60px;
+			background-color:$themeColor;
+			@include transition(all .5s);
+		}
+	}
+	.user-serve-clause{
+		overflow:hidden;
+		h3{
+			margin-top:20px;
+			font:bold 14px/2 $publicFont;
+			color:$TitleTextColor;
+		}
+		p{
+			font:14px/1.5 $publicFont;
+			color:$tagTextColor;
+		}
+	}
+	.btn-hide{
+	    margin-top:10px;
+		border-radius:5px;
+		overflow:hidden;
+		a{
+			display:block;
+			background-color:$themeColor;
+			font:bold 18px/46px $publicFont;
+			color:$white;
+			text-align:center;
+			&:hover{
+				background-color:#9e1a42;
+			}
+		}
+	}
+}
+.user-serve.on{margin:-255px 0 0 -220px;}
+
+#iframe{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:101;
+	display:none;
+}

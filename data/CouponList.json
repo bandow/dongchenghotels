@@ -1,0 +1,531 @@
+{
+  "CouponRp": {
+    "Coupons": [
+      {
+        "CouponCode": "0000000",
+        "Name": "7折",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 0.7,
+        "CouponDiscountType": 2
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "8折",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 0.8,
+        "CouponDiscountType": 2
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "10元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 10.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "20元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 20.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "20元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 20.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "20元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 20.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "30元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 30.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "30元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 30.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "30元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 30.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "7折",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 0.7,
+        "CouponDiscountType": 2
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "8折",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 0.8,
+        "CouponDiscountType": 2
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "10元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 10.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "20元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 20.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "20元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 20.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "20元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 20.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "30元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 30.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "30元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 30.0,
+        "CouponDiscountType": 3
+      },
+      {
+        "CouponCode": "0000000",
+        "Name": "30元优惠券",
+        "MemberNo": null,
+        "CouponId": null,
+        "Memo": "",
+        "DisableDays": null,
+        "DisableHolidays": null,
+        "EnableBrandCode": null,
+        "EnableHotels": [
+          "全国酒店通用"
+        ],
+        "EnableMemberTypes": null,
+        "EndTime": "2017-09-30 00:00:00",
+        "StartTime": "2017-07-30 00:00:00",
+        "ledgerCodes": null,
+        "CostValue": 30.0,
+        "CouponDiscountType": 3
+      }
+    ],
+    "KeepTime": "2017-09-30 00:00:00"
+  },
+  "PricesRp": [
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-30 00:00:00",
+      "RoomFee": 270.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-31 00:00:00",
+      "RoomFee": 280.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-01 00:00:00",
+      "RoomFee": 290.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-02 00:00:00",
+      "RoomFee": 300.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-30 00:00:00",
+      "RoomFee": 270.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-31 00:00:00",
+      "RoomFee": 280.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-01 00:00:00",
+      "RoomFee": 290.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-02 00:00:00",
+      "RoomFee": 300.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-30 00:00:00",
+      "RoomFee": 270.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-31 00:00:00",
+      "RoomFee": 280.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-01 00:00:00",
+      "RoomFee": 290.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-02 00:00:00",
+      "RoomFee": 300.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-30 00:00:00",
+      "RoomFee": 270.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-31 00:00:00",
+      "RoomFee": 280.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-01 00:00:00",
+      "RoomFee": 290.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-02 00:00:00",
+      "RoomFee": 300.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-30 00:00:00",
+      "RoomFee": 270.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-08-31 00:00:00",
+      "RoomFee": 280.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-01 00:00:00",
+      "RoomFee": 290.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    },
+    {
+      "RackFee": 300.0,
+      "RoomTypeId": "SS",
+      "BizDay": "2017-09-02 00:00:00",
+      "RoomFee": 300.0,
+      "OriginalRoomFee": 0.0,
+      "FeeType": null,
+      "UsableCount": 0
+    }
+  ]
+}

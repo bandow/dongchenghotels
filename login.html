@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+ 	<meta name="description" content="不超过150个字符"/>
+ 	<meta name="keywords" content=""/>
+ 	<meta name="author" content="name, sycbbb@sina.com"/>
+ 	<meta name="robots" content="index,follow"/>
+	<title></title>
+	<link rel="stylesheet" href="styles/login-register.css">
+	<style>
+		/*登录注册样式 begin*/
+		.login-register-content .login-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content .other-align a{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content label p i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label p i{background-image:url(images/hotel_icon.png);}
+		.retrieve-password .retrieve-password-go-back a{background-image:url(images/hotel_icon.png);}
+		.retrieve-password label.code > i{background-image:url(images/hotel_icon.png);}
+		.register-success .title i{background-image:url(images/hotel_icon.png);}
+		.register-success .register-success-content .gift{background-image:url(images/hotel_icon.png);}
+		.other-login .other-login-content label.code > i{background-image:url(images/hotel_icon.png);}
+		.phone-login label.code > i{background-image:url(images/hotel_icon.png);}
+		.phone-login .phone-login-go-back a{background-image:url(images/hotel_icon.png);}
+		.binding .binding-content h2 i{background-image:url(images/hotel_icon.png);}
+		.settings-success i{background-image:url(images/hotel_icon.png);}
+		/*登录注册样式 end*/
+	</style>
+</head>
+<body>
+	<!-- 覆盖层 begin-->
+	<div class="mask"></div>
+	<!-- 覆盖层 end-->
+	<!-- 登录注册模块 begin-->
+	<div class="login-register-mask">
+		<div class="login-register-mask-close" onclick="hideLogin();">
+			<div class="lrmc-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="title">
+			<ul>
+				<li class="active">会员登录</li>
+				<li>新用户注册
+					<p>送50元礼包</p>
+				</li>
+				<div class="line"></div>
+			</ul>
+		</div>
+		<div class="login-register-content">
+			<div class="login-content items" style="display:block;">
+				<label>
+					<input type="text" name="username" id="username" placeholder="请输入会员手机号 或 邮箱" oninput="deletePrompt($(this))">
+				</label>
+				<label><input type="password" name="password" id="password" placeholder="请输入密码" oninput="deletePrompt($(this))" ></label>
+				<label class="code">
+					<input type="text" name="code" id="code" placeholder="请输入右侧图片码" oninput="deletePrompt($(this))">
+					<img src="images/login_code.jpg" alt="">
+					<i></i>
+				</label>
+				<div class="btn"><a href="javascript:;">登录</a></div>
+				<div class="btn-hide"><a href="javascript:;" onclick="submitLogin($(this));">登录</a></div>
+				<p class="phone-align"><a href="javascript:;" onclick="phoneLogin();">手机动态码登录</a><a class="password" href="javascript:;" onclick="passwordReturn();">忘记密码?</a></p>
+				<p class="other-align">
+					<span>其他登录方式：</span>
+					<a class="Wechat" href=""></a>
+					<a class="sina" href=""></a>
+					<a class="qq" href="javascript:;" onclick="qqLogin()"></a>
+				</p>
+			</div>
+			<div class="register-content items">
+				<label>
+					<input type="text" name="tel" id="tel" placeholder="请输入注册手机号" oninput="deletePrompt($(this))">
+				</label>
+				<label class="code">
+					<input type="text" name="imgCode" id="imgCode" placeholder="请输入右侧图片码" oninput="deletePrompt($(this))">
+					<img src="images/login_code.jpg" alt="">
+					<i></i>
+				</label>
+				<label class="phone-code">
+					<input type="text" name="messageCode" id="messageCode" placeholder="请输入短信验证码" oninput="deletePrompt($(this))">
+					<a href="javascript:;" onclick="timeSMS($(this))">获取验证码</a>
+				</label> 
+				<div class="btn"><a href="javascript:;">提交注册</a></div>
+				<div class="btn-hide"><a href="javascript:;" onclick="submitRegister();">提交注册</a></div>
+				<p>点击注册按钮，既代表您同意<a href="javascript:;" onclick="userServe();">《用户服务协议》</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- 登录注册模块 end-->
+	<!-- 找回密码模块 begin-->
+	<div class="retrieve-password">
+		<div class="retrieve-password-close" onclick="hidePassword();">
+			<div class="rpc-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="retrieve-password-go-back" onclick="goLogin();">
+			<a href="javascript:;"></a>
+		</div>
+		<div class="title"><h3>找回密码</h3><div class="line"></div></div>
+		<label>
+			<input type="text" name="tel" id="telPassword" placeholder="请输入注册手机号" oninput="deletePrompt($(this))">
+		</label>
+		<label class="code">
+			<input type="text" name="imgCode" id="imgCodePassword" placeholder="请输入右侧图片码" oninput="deletePrompt($(this))">
+			<img src="images/login_code.jpg" alt="">
+			<i></i>
+		</label>
+		<label class="phone-code">
+			<input type="text" name="messageCode" id="messageCodePassword" placeholder="请输入短信验证码" oninput="deletePrompt($(this))">
+			<a href="javascript:;" onclick="timeSMS($(this))">获取验证码</a>
+		</label> 
+		<label>
+			<input type="text" name="newpassword" id="newpassword" placeholder="请输入新密码" oninput="deletePrompt($(this))">
+		</label>
+		<div class="btn"><a href="javascript:;">提交</a></div>
+		<div class="btn-hide"><a href="javascript:;" onclick="submitPassword();">提交</a></div>
+	</div>
+	<!-- 找回密码模块 end-->
+	<!-- 注册成功模块 begin -->
+	<div class="register-success">
+		<div class="register-success-close" onclick="hideRegisterSuccess();">
+			<div class="register-success-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="title">
+			<h2><i></i><span>恭喜您，注册成功！</span></h2>
+			<h5>已将<span>50元</span>礼包赠送到您的账户，预订酒店享优惠</h5>
+		</div>
+		<div class="register-success-content">
+			<div class="gift">
+				<h2>¥<span>50</span>礼包</h2>
+			</div>
+			<h5>您获得以下权益：</h5>
+			<p>1、享受最低门市价9折优惠。 </p>
+			<p>2、享受本人入住1.7倍房费积分。</p> 
+			<p>3、享受预订保留至18:00，延迟退房至12:00。</p>
+		</div>	
+		<div class="btn"><a href="javascript:;" onclick="hideRegisterSuccess();">确定</a></div>
+	</div>
+	<!-- 注册成功模块 end -->
+	<!-- 其他方式登录模块 begin -->
+	<div class="other-login">
+		<div class="other-login-close" onclick="hideOtherLogin();">
+			<div class="ol-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="user">
+			<div class="img"><img src="images/user.jpg" alt=""></div>
+			<h3>您好！User</h3>
+		</div>
+		<p>首次使用QQ登录，完善资料后，开启东呈会美好旅程</p>
+		<div class="other-login-content">
+			<label>
+				<input type="text" name="otherusername" id="otherusername" placeholder="请输入会员手机号 或 邮箱" oninput="deletePrompt($(this))">
+			</label>
+			<label><input type="password" name="otherpassword" id="otherpassword" placeholder="请输入密码" oninput="deletePrompt($(this))" ></label>
+			<label class="code">
+				<input type="text" name="othercode" id="othercode" placeholder="请输入右侧图片码" oninput="deletePrompt($(this))">
+				<img src="images/login_code.jpg" alt="">
+				<i></i>
+			</label>
+			<div class="btn"><a href="javascript:;">登录</a></div>
+			<div class="btn-hide"><a href="javascript:;" onclick="otherSubmitLogin();">登录</a></div>
+		</div>
+	</div>
+	<!-- 其他方式登录模块 end -->
+	<!-- 手机动态登录 begin -->
+	<div class="phone-login">
+		<div class="phone-login-close" onclick="hidePhoneLogin();">
+			<div class="pl-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="phone-login-go-back" onclick="goLogin();">
+			<a href="javascript:;"></a>
+		</div>
+		<div class="title"><h3>手机动态登录</h3><div class="line"></div></div>
+		<label>
+			<input type="text" name="phone" id="phone" placeholder="请输入注册手机号" oninput="deletePrompt($(this))">
+		</label>
+		<label class="code">
+			<input type="text" name="imgCodePhone" id="imgCodePhone" placeholder="请输入右侧图片码" oninput="deletePrompt($(this))">
+			<img src="images/login_code.jpg" alt="">
+			<i></i>
+		</label>
+		<label class="phone-code">
+			<input type="text" name="messageCodePhone" id="messageCodePhone" placeholder="请输入短信验证码" oninput="deletePrompt($(this))">
+			<a href="javascript:;" onclick="timeSMS($(this))">获取验证码</a>
+		</label> 
+		<div class="btn"><a href="javascript:;">登录</a></div>
+		<div class="btn-hide"><a href="javascript:;" onclick="submitPhoneLogin();">提交</a></div>
+		<a href="javascript:;" onclick="goLogin();">帐号密码登录（手机号或邮箱）</a>
+	</div>
+	<!-- 手机动态登录 end -->
+	<!-- 用户服务协议 begin -->
+	<div class="user-serve">
+		<div class="user-serve-close" onclick="hideUserServe();">
+			<div class="us-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="title"><h3>用户服务协议</h3><div class="line"></div></div>
+		<div class="user-serve-clause">
+			<h3>1 未成年人的特别注意事项</h3>
+			<p>如果您未满18周岁，您无权使用公司服务，因此我们希望您不要向我们提供任何个人信息。如果您未满18周岁，您只能在父母或监护人的陪同下才可以使用公司服务。</p>
+			<h3>2 用户名和密码</h3>
+			<p>当您打算注册成用户后，我们要求您选择一个用户名和密码，还要提供密码提示问题及其答案以便在您丢失密码后我们可以确认您的身份。您只能通过您的密码来使用您的帐号。如果您泄漏了密码，您可能丢失了您的个人识别信息，并且有可能导致对您不利的司法行为。因此不管任何原因使您的密码安全受到危及，您应该立即通过官网上的企业QQ 和我们取得联系。</p>
+			<h3>3 注册信息</h3>
+			<p>当您在注册为用户时，我们要求您填写一张注册表。注册表要求提供您的真实姓名，地址，电话号码，和电子邮件地址。如果您是公司客户，您还被要求提供您的公司的地址，电话号码和贵公司的服务和产品的简短说明。您还有权选择来填写附加信息。这些信息可能包括您公司所在的省份和城市，时区和邮政编码，传真号码，主页和您的职务。我们使用注册信息来获得用户的统计资料。我们将会用这些统计数据来给我们的用户分类，以便有针对性地向我们的用户提供新的服务。我们会通过您的邮件地址来通知您这些新的服务。</p>
+			<h3>4 您的交易行为</h3>
+			<p>我们跟踪IP地址仅仅只是为了安全的必要。如果我们没有发现任何安全问题，我们会及时删除我们收集到的IP地址。我们还跟踪全天的页面访问数据。全天页面访问数据被用来反映网站的流量，一是我们可以为未来的发展制定计划（例如，增加服务器）。</p>
+			<h3>5 广告</h3>
+			<p>我们会对个人身份数据进行综合统计，并为销售和奖励的需要将该综合统计向广告主披露。</p>
+			<h3>6 邮件/短信/会刊服务</h3>
+			<p>东呈酒店集团保留通过邮件、短信、邮寄会刊的形式，对本网站注册用户发送订单信息、促销活动等告知服务的权利。如果您在东呈酒店集团的邮件、短信或会刊，您可以向东呈酒店集团客服提出退阅申请，并注明您的E-mail地址、手机号或相关地址信息，东呈酒店集团会在收到申请后为您办理退阅。</p>
+			<h3>7 第三方</h3>
+			<p>我们不会向任何第三方提供，出售，出租，分享和交易用户的个人信息，除非第三方和东呈酒店集团一起为网站和用户提供服务并且在该服务结束后已将被禁止访问包括其以前能够访问的所有这些资料。当我们被法律强制或依照政府要求提供您的信息时我们将善意地披露您的资料。</p>
+			<h3>8 信息的存储和交换</h3>
+			<p>用户信息和资料被收集和存储在放置于中国的服务器上。只有为了做备份的需要时，我们才可能需要将您的资料传送到别国的服务器上。</p>
+			<h3>9 外部链接</h3>
+			<p>本站含有到其他网站的链接。东呈酒店集团对那些网站的隐私保护措施不负任何责任。我们可能在任何需要的时候增加商业伙伴或共用品牌的网站，但是提供给他们的将仅仅是综合信息，我们将不会公开您的身份。</p>
+			<h3>10 安全</h3>
+			<p>我们网站有相应的安全措施来确保我们掌握的信息不丢失，不被滥用和变造。这些安全措施包括向其它服务器备份数据和对用户密码加密。尽管我们有这些安全措施，但请注意在因特网上不存在"完善的安全措施"。</p>
+			<h3>11 修改您的资料</h3>
+			<p>您可以随时在东呈酒店集团的网站修改或者更新你的个人信息和密码（在成功登录之后）。</p>
+			<h3>12 联系我们</h3>
+			<p>如果你对本隐私申明或东呈酒店集团的隐私保护措施以及您在使用中的问题有任何意见和建议请通过官网上的企业QQ及时与我们联系。</p>
+			<h3>13 其他</h3>
+			<p>东呈国际集团会在必要时修改会员服务条款，会员服务条款一旦发生变动将在官网会员政策或公告中通知，而无需另行通知会员，会员可登录官网查看。</p>
+		</div>
+		<div class="btn-hide"><a href="javascript:;" onclick="hideUserServe();">同意并继续</a></div>
+	</div>
+	<!-- 用户服务协议 end -->
+	<!-- script begin -->
+	<script src="plugins/jquery/jquery-1.10.1.min.js"></script>
+	<script src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="scripts/loginRegister.js"></script>
+	<!-- script end -->
+</body>
+</html>

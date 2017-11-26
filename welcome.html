@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+ 	<meta name="description" content="东呈国际集团官方预订平台全新改版，采用了全新的视觉风格，酷炫的交互体验，良好的酒店预订系统，让您预订酒店更加轻松便捷，马上开启官网全新体验吧！"/>
+ 	<meta name="keywords" content="东呈国际集团，酒店预定，酒店预订，酒店查询，酒店地址，连锁酒店，网上订酒店"/>
+ 	<meta name="author" content="name, sycbbb@sina.com"/>
+ 	<meta name="robots" content="index,follow"/>
+	<title>开启官网全新体验-东呈国际集团官方预订平台</title>
+	<link rel="stylesheet" href="styles/welcome.css">
+</head>
+<body>
+	<div id="warapper">
+		<div class="logo">
+			<a href="index.html"><img src="images/welcome_logo.png" alt=""></a>
+		</div>
+		<div class="right"><img src="images/w_bg.png" alt=""></div>
+	    <div class="content">
+			<div class="title">
+				<img src="images/w_titls.png" alt="">
+			</div>
+			<div class="light">
+				<img src="images/w_light.png" alt="">
+			</div>
+	    	<p>全新视觉风格<em>|</em>全新交互体验<em>|</em>全新网站架构</p>
+	    	<div class="btn active">
+	    		<a href="index.html">立即体验</a>
+	    	</div>
+	    </div>
+	</div>
+	<script src="plugins/jquery/jquery-1.10.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			setTimeout(function(){
+				$(".btn").removeClass('active').addClass('on');
+			},3000);
+		})
+	</script>
+</body>
+</html>

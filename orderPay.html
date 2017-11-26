@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+ 	<meta name="description" content="东呈国际集团，一家卓越的连锁酒店集团，在全国有超过1200家连锁酒店，包括城市便捷酒店、宜尚酒店、怡程酒店、柏曼酒店、精途酒店，铂顿公寓等。东呈国际集团官网提供酒店预订，尊享会员服务，酒店地址、酒店电话等其他酒店信息查询服务。"/>
+ 	<meta name="keywords" content="东呈酒店预订，东呈酒店预定，东呈酒店电话，东呈官网"/>
+ 	<meta name="author" content="name, sycbbb@sina.com"/>
+ 	<meta name="robots" content="index,follow"/>
+	<title>支付房费-东呈国际集团官方预订平台</title>
+	<link rel="stylesheet" href="styles/login-register.css">
+	<link rel="stylesheet" href="styles/order-pay.css">
+	<style>
+		.header-nav .logo i{background:url(images/hotel_icon.png) 0 -53px no-repeat;}
+		.order-pay-content .nav i {background: url(images/hotel_icon.png) -480px -25px no-repeat;}
+		.order-pay-content-info .opci-left .title i{background-image:url(images/hotel_icon.png);}
+		.order-footer p.text a i{background-image:url(images/hotel_icon.png)}
+		/*登录注册样式 begin*/
+		.login-register-content .login-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label.code i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content .other-align a{background-image:url(images/hotel_icon.png);}
+		.login-register-content .login-content label p i{background-image:url(images/hotel_icon.png);}
+		.login-register-content .register-content label p i{background-image:url(images/hotel_icon.png);}
+		.retrieve-password .retrieve-password-go-back a{background-image:url(images/hotel_icon.png);}
+		.retrieve-password label.code > i{background-image:url(images/hotel_icon.png);}
+		.register-success .title i{background-image:url(images/hotel_icon.png);}
+		.register-success .register-success-content .gift{background-image:url(images/hotel_icon.png);}
+		.other-login .other-login-content label.code > i{background-image:url(images/hotel_icon.png);}
+		.binding .binding-content h2 i{background-image:url(images/hotel_icon.png);}
+		/*登录注册样式 end*/
+	</style>
+</head>
+<body>
+	<div class="warapper" id="warapper">
+		<div class="header">
+			<div class="header-nav w1050">
+				<a class="logo" href="index.html"><i></i></a>
+				<!-- 登录前 -->
+				<div class="login-before">
+					<a class="login" href="javascript:;" onclick="showLogin();">登录</a>
+					<a class="register" href="javascript:;" onclick="showRegister();">注册</a>
+				</div>
+				<!-- 登录后 -->
+				<div class="login-after" style="display:none;">
+					<a href="">User 上午好！</a>
+				</div>
+			</div>
+		</div>
+		<div class="order-pay-content">
+			<div class="nav w1050">
+				<i></i><a href="index.html">首页</a><em class="arrow-right"></em><a href="">广州酒店预订</a><em class="arrow-right"></em><a href="confirmOrder.html">填写订单</a><em class="arrow-right"></em><a href="orderPay.html">订单支付</a>
+			</div>
+			<div class="order-pay-content-info w1050">
+				<div class="opci-left">
+					<div class="title">
+						<i></i>
+						<h3>订单已提交，请尽快付款！</h3>
+					</div>
+					<p><span>97%</span>的人，选择在<span id="time">29:59</span>内支付让房间整晚保留，如未预付则只保留至2017年11月08日19点 </p>
+					<div class="info">
+						<p>您的订单信息如下：</p>
+						<h2>宜尚酒店广州客村地铁站琶洲会展店</h2>
+						<p>订单编号：R81231210121121  </p>
+						<p>入住房型：精选大床房</p>
+						<p>入住日期：2017-10-28至2017-10-30<span>共2晚</span></p>
+						<p>客服电话：400-700-7899</p>
+						<p>订单总价：￥258</p>
+						<p>优惠减免：-￥10</p>
+						<p>需要支付：<em>￥248</em></p>
+					</div>
+				</div>
+				<div class="opci-right">
+					<p>请选择支付方式：</p>
+					<div class="opci-right-content">
+						<iframe class="J_iframe_pay" id="iframePay" name="iframePay" width="100%" height="100%" src="pay.html" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="order-footer">
+			<p class="title">
+				<a href="#">东呈快讯</a>
+				<a href="#">酒店加盟</a>
+				<a href="#">职位招聘</a>
+				<a href="#">联系我们</a>
+			</p>
+			<p class="text"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45010302000124"><i></i><span>桂公网安备 45010302000124号</span></a><em>|</em>桂ICP备07500682号<em>|</em>东呈酒店集团版权所有 广州东呈酒店投资管理集团有限公司</p>
+		</div>
+	</div>
+	<!-- iframe 内容 begin -->
+	<iframe class="J_iframe" id="iframe" name="iframe" width="100%" height="100%" src="login.html" frameborder="0"></iframe>
+	<!-- iframe 内容 end -->
+	<!-- script begin -->
+	<script src="plugins/jquery/jquery-1.10.1.min.js"></script>
+	<script src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="scripts/loginRegister.js"></script>
+	<script language="javascript"> 
+		$(document).ready(function(){
+			//等高
+			var leftHeight=$(".opci-left").outerHeight();
+			var rightHeight=$(".opci-right").outerHeight();
+			var pHeight=$(".opci-right p").outerHeight();
+			if(leftHeight>rightHeight){
+				$(".opci-right-content").outerHeight(leftHeight);
+			}else if(leftHeight<rightHeight){
+				$(".opci-left").outerHeight(rightHeight);
+			}else{
+				return false;
+			}	
+			getMyTime();
+		});  
+		//1.前面补0
+        function p(n){
+            return n<10?'0'+n:n;
+        }
+        //2.倒计时
+        function getMyTime(){           
+            var startDate=new Date();
+            var endDate=new Date('2017/12/17 11:15:00');
+            var countDown=(endDate.getTime()-startDate.getTime())/1000;
+            var day=parseInt(countDown/(24*60*60));
+            var h=parseInt(countDown/(60*60)%24);
+            var m=parseInt(countDown/60%60);
+            var s=parseInt(countDown%60);                
+            document.getElementById('time').innerHTML=p(m)+':'+p(s);
+            setTimeout('getMyTime()',500);              
+        }  
+	</script>
+	<!-- script end -->
+</body>
+</html>
