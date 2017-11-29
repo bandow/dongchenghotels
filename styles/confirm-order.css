@@ -1140,10 +1140,10 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
   background-position: -339px -107px;
 }
 .choose-coupon .choose-coupon-list ul li.disabled .r .r-left h2 {
-  color: #ccc;
+  color: #fff;
 }
 .choose-coupon .choose-coupon-list ul li.disabled .r .r-left span {
-  color: #ccc;
+  color: #fff;
 }
 .choose-coupon .choose-coupon-list ul li.disabled .r .text h2 {
   color: #ccc;
