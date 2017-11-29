@@ -1130,11 +1130,14 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
   font: 12px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #595959;
 }
+.choose-coupon .choose-coupon-list ul li .msg {
+  display: none;
+}
 .choose-coupon .choose-coupon-list ul li.on .choose-icon {
   background-position: -237px -65px;
 }
 .choose-coupon .choose-coupon-list ul li.disabled .r .r-left {
-  background-position: -336px -107px;
+  background-position: -339px -107px;
 }
 .choose-coupon .choose-coupon-list ul li.disabled .r .r-left h2 {
   color: #ccc;
@@ -1148,13 +1151,48 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
 .choose-coupon .choose-coupon-list ul li.disabled .r .text p {
   color: #ccc;
 }
+.choose-coupon .choose-coupon-list ul li.disabled .msg {
+  display: block;
+  font: 12px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #ccc;
+  text-align: right;
+}
+.choose-coupon .null-coupon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -52px 0 0 -42px;
+}
+.choose-coupon .null-coupon i {
+  margin: 0 auto;
+  display: block;
+  width: 53px;
+  height: 63px;
+}
+.choose-coupon .null-coupon i img {
+  width: 100%;
+}
+.choose-coupon .null-coupon p {
+  font: 14px/3 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #595959;
+  text-align: center;
+}
 .choose-coupon > p {
   padding: 0 0 0 30px;
   margin-top: 20px;
-  width: 315px;
+  margin-bottom: 20px;
+  width: 300px;
   font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #525252;
   cursor: pointer;
+}
+.choose-coupon > p i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position: -302px -65px;
+  float: right;
+  margin-top: 3px;
 }
 .choose-coupon .btn {
   margin: 20px auto 30px;

@@ -21,6 +21,7 @@
 		.choose-coupon .choose-coupon-list ul li .choose-icon{background-image:url(images/hotel_icon.png)}
 		.choose-coupon .choose-coupon-list ul li .r .r-left{background-image:url(images/hotel_icon.png)}
 		.order-footer p.text a i{background-image:url(images/hotel_icon.png)}
+		.choose-coupon > p i{background-image:url(images/hotel_icon.png)}
 		/*登录注册样式 begin*/
 		.login-register-content .login-content label.code i{background-image:url(images/hotel_icon.png);}
 		.login-register-content .register-content label.code i{background-image:url(images/hotel_icon.png);}
@@ -168,6 +169,11 @@
 							<label><input type="text" placeholder="入住人手机号"></label>
 							<span>预订成功后会向您发送短信通知</span>
 						</div>
+						<div class="items">
+							<em><i>*</i> 身份证号： </em>
+							<label><input type="text" placeholder="请输入身份证号"></label>
+							<span>预订成功后会向您发送短信通知</span>
+						</div>
 						<!-- 登陆后以下class items 是不显示的，未登录才显示的 begin-->
 						<div class="items">
 							<em><i>*</i> 图 片 码 ：</em>
@@ -176,7 +182,7 @@
 							<i></i>
 						</div> 
 						<div class="items">
-							<em><i>*</i> 手机号码：</em>
+							<em><i>*</i> 验 证 码：</em>
 							<label><input type="text" placeholder="请输入短信验证码"></label>
 							<a href="">获取验证码</a>
 						</div>
@@ -276,7 +282,13 @@
 				</li> -->
 			</ul>
 		</div>
-		<p class="arrow-bottom" onclick="kindlyRminder();">温馨提示： 为什么不能再选择优惠了？</p>
+		<!-- 没有优惠卷begin -->
+		<div class="null-coupon" style="display:none;">
+			<i><img src="images/mascot_null-coupon.png" alt=""></i>
+			<p>无可用优惠券</p>
+		</div>
+		<!-- 没有优惠卷end -->
+		<p onclick="kindlyRminder();">温馨提示： 为什么不能再选择优惠了？<i></i></p>
 		<div class="btn"><a href="javascript:;">确认使用</a></div>
 	</div>
 	<!-- 选择优惠券 end -->
@@ -524,6 +536,7 @@
 				        	htmlItems+='<p>有效期：'+data.CouponRp.Coupons[i].EndTime.replace(/00:00:00/, "")+'</p>';
 				        	htmlItems+='</div>';
 				        	htmlItems+='</div>';
+				        	htmlItems+='<p class="msg"><p>';
 				        	htmlItems+='</li>';
 				        }
 					}
@@ -711,9 +724,6 @@
 		}
 
 		//温馨提示： 为什么不能再选择优惠了？
-		function kindlyRminder(){
-
-		}
 		function kindlyRminder(){
 			$('.choose-coupon').removeClass('on');
 			$(".kindly-reminder").addClass("on");

@@ -1003,13 +1003,16 @@
 						}
 					}
 				}
+				.msg{
+					display:none;
+				}
 			}
 			li.on{
 				.choose-icon{background-position:-237px -65px;}
 			}
 			li.disabled{
 				.r .r-left{
-						background-position:-336px -107px;
+						background-position:-339px -107px;
 						h2{color:#ccc;}
 						span{color:#ccc;}
 					} 
@@ -1017,16 +1020,51 @@
 					 h2{color:#ccc;}
 					 p{color:#ccc}
 				}
+				.msg{
+					display:block;
+					font:12px/1.5 $publicFont;
+					color:#ccc;
+					text-align:right;
+				}
 			}
+		}
+	}
+	.null-coupon{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin:-52px 0 0 -42px;
+		i{
+			margin:0 auto;
+		    display: block;
+			width:53px;
+			height:63px;
+			img{
+				width:100%;
+			}
+		}
+		p{
+			font:14px/3 $publicFont;
+			color:#595959;
+			text-align:center;
 		}
 	}
 	>p{
 		padding: 0 0 0 30px;
 	    margin-top: 20px;
-    	width: 315px;
+	    margin-bottom: 20px;
+    	width: 300px;
 		font:14px/1.5 $publicFont;
 		color:#525252;
 		cursor:pointer;
+		i{
+			display:inline-block;
+			width:16px;
+			height:16px;
+			background-position:-302px -65px;
+			float:right;
+		    margin-top:3px;
+		}
 	}
 	.btn{
 	    margin: 20px auto 30px;

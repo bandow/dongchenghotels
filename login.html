@@ -51,12 +51,12 @@
 				<label>
 					<input type="text" name="username" id="username" placeholder="请输入会员手机号 或 邮箱" oninput="deletePrompt($(this))">
 				</label>
-				<label><input type="password" name="password" id="password" placeholder="请输入密码" oninput="deletePrompt($(this))" ></label>
 				<label class="code">
 					<input type="text" name="code" id="code" placeholder="请输入右侧图片码" oninput="deletePrompt($(this))">
 					<img src="images/login_code.jpg" alt="">
 					<i></i>
 				</label>
+				<label><input type="password" name="password" id="password" placeholder="请输入密码" oninput="deletePrompt($(this))" ></label>
 				<div class="btn"><a href="javascript:;">登录</a></div>
 				<div class="btn-hide"><a href="javascript:;" onclick="submitLogin($(this));">登录</a></div>
 				<p class="phone-align"><a href="javascript:;" onclick="phoneLogin();">手机动态码登录</a><a class="password" href="javascript:;" onclick="passwordReturn();">忘记密码?</a></p>
