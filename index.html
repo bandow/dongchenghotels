@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="plugins/swiper/swiper-3.4.2.min.css">
 	<link rel="stylesheet" href="plugins/picker/daterangepicker.min.css">
 	<link rel="stylesheet" href="styles/tabs.css">
+	<link rel="stylesheet" href="styles/loading-layer.css">
 	<style>
 		.swiper-container{height:550px;}
 		.swiper-slide{height:550px;}
@@ -187,1571 +188,1571 @@
 					<p>目的地</p>
 					<!-- <label class="select-city arrow-bottom"><input type="text" placeholder="广州"></label> -->
 					<!-- 选择城市开始 begin-->
-					<div class="input_box select-city arrow-bottom">
-                        <input id="cityCheck" oninput="searchCity()" placeholder="请输入" type="text" autocomplete="off" value="广州">
-                        <div id="McheckinCity" class="Mcheckin_city hide">
-                            <div class="history">
-                                <div class="title">
-                                    <span>搜索历史</span>
-                                    <div id="cleadHistory" class="clear">
-                                        <img src="images/trash_can.png">
-                                           <span>清除</span>
-                                    </div>
-                                </div>
-                                <ul id="historyList" class="history_list">
-                                </ul>
-                            </div>
-                            <div class="tabs">
-                                <div class="backbox"></div>
-                                <div class="links">
-                                    <a href="javascript:;" data-rankid="hotCity" class="link"><span class="ranks active">热门</span></a>
-                                    <a href="javascript:;" data-rankid="adRank" class="link"><span class="ranks">ABCD</span></a>
-                                    <a href="javascript:;" data-rankid="ehRank" class="link"><span class="ranks">EFGH</span></a>
-                                    <a href="javascript:;" data-rankid="ilRank" class="link"><span class="ranks">IJKL</span></a>
-                                    <a href="javascript:;" data-rankid="mpRank" class="link"><span class="ranks">MNOP</span></a>
-                                    <a href="javascript:;" data-rankid="qtRank" class="link"><span class="ranks">QRST</span></a>
-                                    <a href="javascript:;" data-rankid="uxRank" class="link"><span class="ranks">UVWX</span></a>
-                                    <a href="javascript:;" data-rankid="yzRank" class="link"><span class="ranks">YZ</span></a>
-                                    <a href="javascript:;" data-rankid="overseasCity" class="link"><span class="ranks">海外城市</span></a>
-                                </div>
-                            </div>
-                            <div class="tabcontainer">
-                                <div id="hotTabcontent"  class="tabcontent">
-                                    <div class="group">
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="javascript:;" data-cityid="301" data-city-id="301" data-city-name="上海">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" data-cityid="301" data-city-id="301" data-city-name="北京">北京</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                 <div id="adRank" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="ehRank" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="ilRank" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="mpRank" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="qtRank" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="uxRank" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="yzRank" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="overseasCity" class="tabcontent hide">
-                                    <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                     <div class="group">
-                                        <div class="char">A</div>
-                                        <ul class="citylist">
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                              <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">上海</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tips">温馨提示:支持中文/拼音/简拼输入</div>
-                        </div>
-                        <div id="McheckinCheck" class="Mcheckin_check hide">
-                            <div class="group">
-                                <div class="city">
-                                    <div></div>
-                                    <span>城市</span>
-                                </div>
-                                <ul>
-                                    <li><a href="#">广州</a></li>
-                                </ul>
-                            </div>
-                            <div class="group">
-                                 <div class="city">
-                                    <span>全国酒店</span>
-                                     <span class="more">查看剩余41家酒店</span>
-                                </div>
-                                <ul>
-                                    <li>广州中华广场店<span class="address">广州市越秀区中山二路32号</span></li>
-                                    <li>广州万达广场店<span class="address">广州市越秀区中山二路32号</span></li>
-                                    <li>精途酒店广州新港中路店<span class="address">广州市越秀区中山二路32号</span></li>
-                                </ul>
-                            </div>
-                            <div class="group">
-                                 <div class="city">
-                                    <span>地标</span>
-                                </div>
-                                <ul>
-                                    <li>广州塔<span class="address">广州市越秀区中山二路32号</span></li>
-                                    <li>广州花城广场<span class="address">广州市越秀区中山二路32号</span></li>
-                                    <li>广州中信广场<span class="address">广州市越秀区中山二路32号</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="McheckinNone" class="Mcheckin_none hide">
-                            <div>
-                                按<span id="resultsMessage" class="results_message"></span>检索的结果
-                            </div>
-                            <div class="no_results">
-                                暂无结果
-                            </div>
-                        </div>
-                    </div>
+				    <div class="input_box select-city arrow-bottom">
+				        <input id="cityCheck" oninput="searchCity()" placeholder="请输入" type="text" autocomplete="off" value="广州">
+				        <div id="McheckinCity" class="Mcheckin_city hide">
+				            <div class="history">
+				                <div class="title">
+				                    <span>搜索历史</span>
+				                    <div id="cleadHistory" class="clear">
+				                        <img src="images/trash_can.png">
+				                           <span>清除</span>
+				                    </div>
+				                </div>
+				                <ul id="historyList" class="history_list">
+				                </ul>
+				            </div>
+				            <div class="tabs">
+				                <div class="backbox"></div>
+				                <div class="links">
+				                    <a href="javascript:;" data-rankid="hotCity" class="link"><span class="ranks active">热门</span></a>
+				                    <a href="javascript:;" data-rankid="adRank" class="link"><span class="ranks">ABCD</span></a>
+				                    <a href="javascript:;" data-rankid="ehRank" class="link"><span class="ranks">EFGH</span></a>
+				                    <a href="javascript:;" data-rankid="ilRank" class="link"><span class="ranks">IJKL</span></a>
+				                    <a href="javascript:;" data-rankid="mpRank" class="link"><span class="ranks">MNOP</span></a>
+				                    <a href="javascript:;" data-rankid="qtRank" class="link"><span class="ranks">QRST</span></a>
+				                    <a href="javascript:;" data-rankid="uxRank" class="link"><span class="ranks">UVWX</span></a>
+				                    <a href="javascript:;" data-rankid="yzRank" class="link"><span class="ranks">YZ</span></a>
+				                    <a href="javascript:;" data-rankid="overseasCity" class="link"><span class="ranks">海外城市</span></a>
+				                </div>
+				            </div>
+				            <div class="tabcontainer">
+				                <div id="hotTabcontent"  class="tabcontent">
+				                    <div class="group">
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="javascript:;" data-cityid="301" data-city-id="301" data-city-name="上海">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="javascript:;" data-cityid="301" data-city-id="301" data-city-name="北京">北京</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                 <div id="adRank" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                <div id="ehRank" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                <div id="ilRank" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                <div id="mpRank" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                <div id="qtRank" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                <div id="uxRank" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                <div id="yzRank" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				                <div id="overseasCity" class="tabcontent hide">
+				                    <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                     <div class="group">
+				                        <div class="char">A</div>
+				                        <ul class="citylist">
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                              <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                            <li>
+				                                <a href="#">上海</a>
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="tips">温馨提示:支持中文/拼音/简拼输入</div>
+				        </div>
+				        <div id="McheckinCheck" class="Mcheckin_check hide">
+				            <div class="group">
+				                <div class="city">
+				                    <div></div>
+				                    <span>城市</span>
+				                </div>
+				                <ul>
+				                    <li><a href="#">广州</a></li>
+				                </ul>
+				            </div>
+				            <div class="group">
+				                 <div class="city">
+				                    <span>全国酒店</span>
+				                     <span class="more">查看剩余41家酒店</span>
+				                </div>
+				                <ul>
+				                    <li>广州中华广场店<span class="address">广州市越秀区中山二路32号</span></li>
+				                    <li>广州万达广场店<span class="address">广州市越秀区中山二路32号</span></li>
+				                    <li>精途酒店广州新港中路店<span class="address">广州市越秀区中山二路32号</span></li>
+				                </ul>
+				            </div>
+				            <div class="group">
+				                 <div class="city">
+				                    <span>地标</span>
+				                </div>
+				                <ul>
+				                    <li>广州塔<span class="address">广州市越秀区中山二路32号</span></li>
+				                    <li>广州花城广场<span class="address">广州市越秀区中山二路32号</span></li>
+				                    <li>广州中信广场<span class="address">广州市越秀区中山二路32号</span></li>
+				                </ul>
+				            </div>
+				        </div>
+				        <div id="McheckinNone" class="Mcheckin_none hide">
+				            <div>
+				                按<span id="resultsMessage" class="results_message"></span>检索的结果
+				            </div>
+				            <div class="no_results">
+				                暂无结果
+				            </div>
+				        </div>
+				    </div>
                     <!-- 选择城市开始 end-->
 				</div>
 				<div class="date" id="date">
@@ -2043,6 +2044,14 @@
 				</div>
 				<p><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45010302000124"><i></i>桂公网安备 45010302000124号</a><em>|</em>桂ICP备07500682号<em>|</em>东呈酒店集团版权所有 广州东呈酒店投资管理集团有限公司</p>
 			</div>
+			<!-- <div class="loading-in">
+				<div class="spinner">
+				  <div class="bounce1"></div>
+				  <div class="bounce2"></div>
+				  <div class="bounce3"></div>
+				</div>
+				<p>努力加载中</p>
+			</div> -->
 		</div>
 		<!-- 置顶模块 begin -->
 		<div class="go-back">
@@ -2069,6 +2078,24 @@
 	<!-- </div> -->
 	<!-- iframe 内容 end -->
 
+	<!-- <div class="loading-mask"></div>	 -->
+	<!-- <div class="loading-layer kindly-reminder on">
+		<div class="loading-layer-close">
+			<div class="lrmc-content"><a href="javascript:;"></a></div>
+		</div>
+		<div class="title">温馨提示</div>
+		<p class="middle">登录已过期，请x重新登录</p>
+		<p class="left">登录或注册成为会员后，可享受优惠房价，赠送积分等会员权益</p>
+		<div class="btn"><a href="">确定</a></div>
+		<div class="two-btn"><a href="">登录</a><a href="">注册</a></div>
+	</div> -->
+	<!-- <div class="loading-out on">
+		<div class="img"><img src="images/bg_mascot_loading.gif" alt=""></div>
+		<p>拼命加载中...</p>
+	</div> -->
+	
+	
+
 	<!-- script begin -->
 	<script src="plugins/jquery/jquery-1.10.1.min.js"></script>
 	<script src="plugins/swiper/swiper-3.4.2.min.js"></script>
@@ -2077,6 +2104,7 @@
 	<script src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="scripts/loginRegister.js"></script>
 	<script src="scripts/tabs.js"></script>
+	<script src="scripts/loadingLayer.js"></script>
 	<script language="javascript"> 
 		var mySwiper = new Swiper('.swiper-container',{
 		    pagination : '.swiper-pagination',

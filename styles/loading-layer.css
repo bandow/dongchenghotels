@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for PC
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2017-10-20
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  font-size: 12px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+}
+
+ol, ul {
+  /*去掉列表点*/
+  list-style: none;
+}
+
+table {
+  /*去掉表格的双行线*/
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*去掉chrome表单自动填充去掉input黄色背景*/
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.loading-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background-color: #000;
+  opacity: .5;
+}
+
+.loading-layer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  padding: 20px 40px;
+  margin: -1000px 0 0 -220px;
+  width: 440px;
+  height: auto;
+  border-radius: 3px;
+  background-color: #fff;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.loading-layer .loading-layer-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 36px;
+  height: 50px;
+  background-color: #eaeaea;
+  border-radius: 0 0 30px 30px;
+  cursor: pointer;
+}
+.loading-layer .loading-layer-close .lrmc-content {
+  padding: 3px 5px 0;
+  margin: 17px 3px 3px 3px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.loading-layer .loading-layer-close .lrmc-content a {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: middle;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.loading-layer .loading-layer-close .lrmc-content a:after {
+  content: '/';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #c62153;
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.loading-layer .loading-layer-close .lrmc-content:hover a {
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.loading-layer .title {
+  margin-bottom: 20px;
+  text-align: center;
+  font: bold 16px/2 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.loading-layer .middle {
+  text-align: center;
+  font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.loading-layer .left {
+  font: 14px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+.loading-layer .btn {
+  margin-top: 40px;
+}
+.loading-layer .btn a {
+  margin: 0 auto;
+  width: 160px;
+  display: block;
+  background-color: #c62153;
+  font: 16px/40px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+.loading-layer .btn a:hover {
+  background-color: #9e1a42;
+}
+.loading-layer .two-btn {
+  margin: 0 auto;
+  width: 320px;
+  margin-top: 40px;
+}
+.loading-layer .two-btn a {
+  float: left;
+  margin: 0 20px;
+}
+.loading-layer .two-btn a:first-child {
+  width: 120px;
+  display: block;
+  background-color: #fff;
+  border: 1px solid;
+  font: 16px/40px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  border-radius: 5px;
+  color: #c62153;
+  text-align: center;
+}
+.loading-layer .two-btn a:first-child:hover {
+  background-color: #9e1a42;
+  color: #fff;
+}
+.loading-layer .two-btn a:last-child {
+  width: 120px;
+  display: block;
+  background-color: #c62153;
+  font: 16px/40px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+.loading-layer .two-btn a:last-child:hover {
+  background-color: #9e1a42;
+}
+
+.loading-layer.on {
+  margin: -110px 0 0 -220px;
+}
+
+.loading-out {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  padding: 0 50px;
+  margin: -1000px 0 0 -220px;
+  width: 440px;
+  height: auto;
+  border-radius: 3px;
+  background-color: #fff;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.loading-out .img {
+  float: left;
+  width: 120px;
+}
+.loading-out .img img {
+  width: 100%;
+}
+.loading-out p {
+  margin-left: 120px;
+  font: bold 18px/120px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #c62153;
+}
+
+.loading-out.on {
+  margin: -60px 0 0 -220px;
+}
+
+.loading-in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  text-align: center;
+}
+.loading-in .spinner {
+  float: left;
+  width: 80px;
+  text-align: center;
+}
+.loading-in .spinner > div {
+  width: 20px;
+  height: 20px;
+  background-color: #c62153;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.loading-in .spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loading-in .spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loading-in p {
+  margin-left: 80px;
+  font: 16px/24px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #444;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=loading-layer.css.map */

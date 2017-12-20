@@ -1,0 +1,209 @@
+@import 'public/base';
+.loading-mask{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:101;
+	// display:none;
+	background-color:$black;
+	opacity:.5;
+}
+.loading-layer{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:20px 40px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:auto;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.loading-layer-close{
+		position:absolute;
+		top:0;
+		right:5px;
+		width:36px;
+		height:50px;
+		background-color:#eaeaea;
+		border-radius:0 0 30px 30px;
+		cursor:pointer;
+		.lrmc-content{
+			padding:3px 5px 0;
+			margin:17px 3px 3px 3px;
+			width:30px;
+			height:30px;
+			background-color:$white;
+			border-radius:100%;
+			a{ 
+			 	display:inline-block;
+			 	width:20px;
+			 	height:1px; 
+			 	background:$themeColor;
+			 	line-height:0;
+			 	font-size:0;
+			 	vertical-align:middle;
+			 	@include transform(rotate(45deg));
+			 	@include transition(all .5s);
+			 	&:after{
+			 		content:'/';
+			 		display:block;
+			 		width:20px;
+			 		height:1px; 
+			 		background:$themeColor;
+			 		@include transform(rotate(90deg));
+			 	}
+			}
+			&:hover{
+				a{@include transform(rotate(225deg));}
+		 	}
+		}
+	}
+	.title{
+		margin-bottom:20px;
+		text-align:center;
+		font:bold 16px/2 $publicFont;
+	}
+	.middle{
+		text-align:center;
+		font:14px/1.5 $publicFont;
+	}
+	.left{
+		font:14px/1.5 $publicFont;
+	}
+	.btn{
+		margin-top:40px;
+		a{
+			margin:0 auto;
+			width:160px;
+			display:block;
+			background-color:$themeColor;
+			font:16px/40px $publicFont;
+			border-radius:5px;
+			color:$white;
+			text-align:center;
+			&:hover{
+				background-color:#9e1a42;
+			}
+		}
+	}
+	.two-btn{
+		margin:0 auto;
+		width:320px;
+		margin-top:40px;
+		a{
+			float:left;
+			margin:0 20px;
+			&:first-child{
+				width:120px;
+				display:block;
+				background-color:$white;
+				border:1px solid;
+				font:16px/40px $publicFont;
+				border-radius:5px;
+				color:$themeColor;
+				text-align:center;
+				&:hover{
+					background-color:#9e1a42;
+					color:$white;
+				}
+			}
+			&:last-child{
+				width:120px;
+				display:block;
+				background-color:$themeColor;
+				font:16px/40px $publicFont;
+				border-radius:5px;
+				color:$white;
+				text-align:center;
+				&:hover{
+					background-color:#9e1a42;
+				}
+			}
+		}
+	}
+}
+.loading-layer.on{
+	margin:-110px 0 0 -220px;
+}
+.loading-out{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:102;
+	padding:0 50px;
+	margin:-1000px 0 0 -220px;
+	width:440px;
+	height:auto;
+	border-radius:3px;
+	background-color:$white;
+	@include transition(all .5s);
+	.img{
+		float:left;
+		width:120px;
+		img{
+			width:100%;
+		}
+	}
+	p{
+		margin-left:120px;
+		font:bold 18px/120px $publicFont;
+		color:$themeColor;
+	}
+}
+.loading-out.on{
+	margin:-60px 0 0 -220px;
+}
+.loading-in{
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:102;
+	text-align:center;
+	.spinner {
+		float:left;
+		width: 80px;
+		text-align: center;
+		>div{
+			width:20px;
+			height:20px;
+			background-color:$themeColor; 
+			border-radius:100%;
+			display: inline-block;
+			-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+			animation: bouncedelay 1.4s infinite ease-in-out;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+		.bounce1 {
+			-webkit-animation-delay: -0.32s;
+			animation-delay: -0.32s;
+		}
+		.bounce2 {
+			-webkit-animation-delay: -0.16s;
+			animation-delay: -0.16s;
+		}
+	}
+	p{
+		margin-left:80px;
+		font:16px/24px $publicFont;
+		color:#444;
+	}
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
